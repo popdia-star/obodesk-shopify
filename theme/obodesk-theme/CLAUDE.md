@@ -1,0 +1,1 @@
+D:/My-AiOS/10_Workspace/WORK/shopify-projects/obodesk-shopify/theme/obodesk-theme/AGENTS.md
