@@ -1,14 +1,20 @@
 <header>
+  {% assign desk_setup_url = collections['desk-setup'].url | default: routes.root_url %}
+  {% assign lighting_url = collections['lighting'].url | default: routes.root_url %}
+  {% assign power_url = collections['power'].url | default: routes.root_url %}
+  {% assign desk_infrastructure_url = collections['desk-infrastructure'].url | default: routes.root_url %}
+  {% assign kits_url = collections['kits'].url | default: routes.root_url %}
+
   <h2 class="header__title">
     {{ shop.name | link_to: routes.root_url }}
   </h2>
 
   <div class="header__menu">
-    <a href="{{ routes.root_url }}">Desk Setup</a>
-    <a href="{{ routes.root_url }}">Lighting</a>
-    <a href="{{ routes.root_url }}">Power</a>
-    <a href="{{ routes.root_url }}">Desk Infrastructure</a>
-    <a href="{{ routes.root_url }}">Kits</a>
+    <a href="{{ desk_setup_url }}">Desk Setup</a>
+    <a href="{{ lighting_url }}">Lighting</a>
+    <a href="{{ power_url }}">Power</a>
+    <a href="{{ desk_infrastructure_url }}">Desk Infrastructure</a>
+    <a href="{{ kits_url }}">Kits</a>
     <a href="{{ routes.root_url }}">Learn</a>
     <a href="{{ routes.root_url }}">PRO</a>
   </div>
