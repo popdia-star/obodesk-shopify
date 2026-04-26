@@ -371,8 +371,7 @@ body {
 }
 
 .obodesk-card,
-.obodesk-point,
-.obodesk-product-card {
+.obodesk-point {
   min-height: 220px;
   padding: 24px;
   border: 1px solid rgba(23, 32, 51, 0.1);
@@ -389,8 +388,7 @@ body {
 }
 
 .obodesk-card h3,
-.obodesk-point h3,
-.obodesk-product-card h3 {
+.obodesk-point h3 {
   margin-block-end: 12px;
 }
 
@@ -429,24 +427,213 @@ body {
   color: #ffffff;
 }
 
+.obodesk-featured {
+  background: #fbfaf6;
+}
+
+.obodesk-product-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 10px;
+  background: #f3f0e8;
+  box-shadow: 0 18px 46px rgba(17, 17, 17, 0.06);
+}
+
 .obodesk-product-card__media {
-  aspect-ratio: 4 / 3;
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3.15;
+  overflow: hidden;
+  background: #e8e3d8;
+}
+
+.obodesk-product-card__media::before {
+  content: "";
+  position: absolute;
+  inset: 18%;
+  border-radius: 999px;
+  background: rgba(126, 112, 255, 0.1);
+  filter: blur(28px);
+}
+
+.obodesk-product-card__media::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 18%;
+  height: 18%;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.08);
+  filter: blur(16px);
+}
+
+.obodesk-product-card__media--riser,
+.obodesk-product-card__media--mat {
+  background: linear-gradient(145deg, #efeae0, #ddd6c8);
+}
+
+.obodesk-product-card__media--sync,
+.obodesk-product-card__media--bar {
+  background: linear-gradient(145deg, #e9e5dc, #d9d4cb);
+}
+
+.obodesk-product-visual {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.obodesk-product-visual--riser {
+  width: 68%;
+  height: 24%;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8a5a35, #56341f);
+  box-shadow: 0 18px 36px rgba(86, 52, 31, 0.24);
+}
+
+.obodesk-product-visual--riser::before,
+.obodesk-product-visual--riser::after {
+  content: "";
+  position: absolute;
+  bottom: -34%;
+  width: 10%;
+  height: 44%;
+  border-radius: 0 0 8px 8px;
+  background: #3b2b22;
+}
+
+.obodesk-product-visual--riser::before {
+  left: 16%;
+}
+
+.obodesk-product-visual--riser::after {
+  right: 16%;
+}
+
+.obodesk-product-visual--mat {
+  width: 72%;
+  height: 36%;
+  border-radius: 18px;
+  background: #f8f5ed;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 16px 32px rgba(17, 17, 17, 0.12);
+}
+
+.obodesk-product-visual--sync {
+  width: 48%;
+  height: 48%;
+  border-radius: 18px;
+  background: #202328;
+  box-shadow: 20px 0 42px rgba(126, 112, 255, 0.28), 0 16px 32px rgba(17, 17, 17, 0.2);
+}
+
+.obodesk-product-visual--sync::after {
+  content: "";
+  position: absolute;
+  right: -16%;
+  top: 14%;
+  width: 4px;
+  height: 72%;
+  border-radius: 999px;
+  background: rgba(155, 124, 255, 0.85);
+  box-shadow: 0 0 20px rgba(155, 124, 255, 0.55);
+}
+
+.obodesk-product-visual--bar {
+  width: 64%;
+  height: 7%;
+  border-radius: 999px;
+  background: #1d2025;
+  box-shadow: 0 12px 28px rgba(17, 17, 17, 0.2);
+}
+
+.obodesk-product-visual--bar::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -130%;
+  height: 110%;
+  border-radius: 999px;
+  background: rgba(255, 247, 224, 0.62);
+  filter: blur(10px);
+}
+
+.obodesk-product-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.obodesk-product-card__tag {
+  width: fit-content;
   margin-block-end: 18px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #e4e8e2, #f7f7f3);
+  padding: 6px 9px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 999px;
+  color: #5d5147;
+  font-size: 0.74rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.obodesk-product-card h3 {
+  margin-block-end: 10px;
+  color: #111111;
+  font-size: 1.05rem;
+}
+
+.obodesk-product-card p {
+  margin-block-end: 22px;
+  color: #555b63;
+}
+
+.obodesk-product-card__link {
+  width: fit-content;
+  margin-block-start: auto;
+  color: #111111;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.obodesk-product-card__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-block-start: 5px;
+  background: rgba(17, 17, 17, 0.35);
 }
 
 .obodesk-footer-cta {
   margin-block-start: clamp(48px, 6vw, 80px);
   padding: clamp(32px, 5vw, 64px);
   border-radius: 8px;
-  background: #f1f4f7;
+  background: #17191d;
+  color: #ffffff;
   text-align: center;
+}
+
+.obodesk-footer-cta .obodesk-eyebrow,
+.obodesk-footer-cta p {
+  color: #c9c4bb;
 }
 
 .obodesk-footer-cta h2 {
   margin-inline: auto;
   margin-block-end: 24px;
+}
+
+.obodesk-footer-cta .obodesk-button--primary {
+  background: #f8f5ed;
+  border-color: #f8f5ed;
+  color: #111111;
 }
 
 @media (max-width: 900px) {
