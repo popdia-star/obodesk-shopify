@@ -5,39 +5,66 @@
   https://shopify.dev/docs/storefronts/themes/architecture/templates/collection
 {% endcomment %}
 
-<h1>{{ collection.title }}</h1>
+<section class="obodesk-collection">
+  <div class="obodesk-collection__hero">
+    <p class="obodesk-eyebrow">OboDesk Collection</p>
+    <h1>{{ collection.title }}</h1>
 
-<div class="collection-products">
-  {% paginate collection.products by 20 %}
-    {% for product in collection.products %}
-      <div class="collection-product">
-        {% if product.featured_image %}
-          {% render 'image',
-            class: 'collection-product__image',
-            image: product.featured_image,
-            url: product.url,
-            width: 400,
-            height: 400,
-            crop: 'center'
-          %}
-        {% endif %}
-        <div class="collection-product__content">
-          <p>{{ product.title | escape | link_to: product.url }}</p>
-          <p>{{ product.price | money }}</p>
-        </div>
+    {% if collection.description != blank %}
+      <div class="obodesk-collection__description">
+        {{ collection.description }}
       </div>
-    {% endfor %}
+    {% else %}
+      <p class="obodesk-collection__description">
+        Build a cleaner, more intentional desk environment with essentials selected for structure, focus, and flow.
+      </p>
+    {% endif %}
+  </div>
 
-    {{ paginate | default_pagination }}
-  {% endpaginate %}
-</div>
+  <div class="obodesk-collection__rail" aria-label="Setup categories">
+    <span>Desk Setup</span>
+    <span>Lighting</span>
+    <span>Power</span>
+    <span>Desk Infrastructure</span>
+    <span>Kits</span>
+  </div>
 
-{% stylesheet %}
-  .collection-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  }
-{% endstylesheet %}
+  <div class="collection-products">
+    {% paginate collection.products by 20 %}
+      {% for product in collection.products %}
+        <article class="collection-product">
+          {% if product.featured_image %}
+            {% render 'image',
+              class: 'collection-product__image',
+              image: product.featured_image,
+              url: product.url,
+              width: 700,
+              height: 700,
+              crop: 'center'
+            %}
+          {% else %}
+            <a class="collection-product__image collection-product__image--placeholder" href="{{ product.url }}">
+              <span>{{ product.title | escape }}</span>
+            </a>
+          {% endif %}
+
+          <div class="collection-product__content">
+            <h2>{{ product.title | escape | link_to: product.url }}</h2>
+            <p>{{ product.price | money }}</p>
+          </div>
+        </article>
+      {% else %}
+        <div class="obodesk-collection__empty">
+          <p class="obodesk-eyebrow">Coming soon</p>
+          <h2>Essentials are being prepared for this collection.</h2>
+          <p>Use this space to shape the collection before products are published.</p>
+        </div>
+      {% endfor %}
+
+      {{ paginate | default_pagination }}
+    {% endpaginate %}
+  </div>
+</section>
 
 {% schema %}
 {

@@ -664,6 +664,135 @@ body {
   color: #111111;
 }
 
+/** OboDesk collection V1 */
+.obodesk-collection {
+  padding-block: clamp(56px, 7vw, 96px);
+}
+
+.obodesk-collection__hero {
+  max-width: 820px;
+  margin-block-end: 32px;
+}
+
+.obodesk-collection__hero h1 {
+  max-width: 760px;
+  font-size: clamp(2.8rem, 6vw, 5.6rem);
+  line-height: 1.02;
+}
+
+.obodesk-collection__description {
+  max-width: 680px;
+  margin-block-start: 20px;
+  color: #596579;
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  line-height: 1.65;
+}
+
+.obodesk-collection__description > * + * {
+  margin-block-start: 0.75rem;
+}
+
+.obodesk-collection__rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-end: 34px;
+}
+
+.obodesk-collection__rail span {
+  padding: 9px 12px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 999px;
+  background: #f7f4ed;
+  color: #5d5147;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.collection-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: 20px;
+}
+
+.collection-product {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 10px;
+  background: #f3f0e8;
+  box-shadow: 0 18px 46px rgba(17, 17, 17, 0.05);
+}
+
+.collection-product__image {
+  display: block;
+  aspect-ratio: 1;
+  background: #e8e3d8;
+  object-fit: cover;
+}
+
+.collection-product__image--placeholder {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #5d5147;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.collection-product__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.collection-product__content h2 {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.collection-product__content a {
+  color: #111111;
+  text-decoration: none;
+}
+
+.collection-product__content p {
+  margin-block-start: auto;
+  color: #555b63;
+  font-weight: 700;
+}
+
+.obodesk-collection__empty {
+  grid-column: 1 / -1;
+  padding: clamp(32px, 5vw, 56px);
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 10px;
+  background: #f3f0e8;
+}
+
+.obodesk-collection__empty h2 {
+  max-width: 620px;
+  margin-block-end: 14px;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  line-height: 1.08;
+}
+
+.obodesk-collection__empty p:last-child {
+  max-width: 560px;
+  color: #596579;
+  line-height: 1.65;
+}
+
+.collection-products .pagination {
+  grid-column: 1 / -1;
+}
+
 @media (max-width: 1100px) {
   .obodesk-hero__inner {
     grid-template-columns: 1fr;
@@ -780,5 +909,30 @@ body {
   .obodesk-footer-cta {
     margin-block-start: 40px;
     padding: 28px 20px;
+  }
+
+  .obodesk-collection {
+    padding-block: 44px;
+  }
+
+  .obodesk-collection__hero {
+    margin-block-end: 24px;
+  }
+
+  .obodesk-collection__hero h1 {
+    font-size: clamp(2.2rem, 12vw, 3.2rem);
+  }
+
+  .obodesk-collection__rail {
+    margin-block-end: 24px;
+  }
+
+  .collection-products {
+    grid-template-columns: repeat(auto-fill, minmax(min(170px, 100%), 1fr));
+    gap: 14px;
+  }
+
+  .collection-product__content {
+    padding: 16px;
   }
 }
