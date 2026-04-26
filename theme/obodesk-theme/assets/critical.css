@@ -203,6 +203,7 @@ body {
 .obodesk-hero {
   background: #f3f0e8;
   color: #111111;
+  overflow: hidden;
 }
 
 .obodesk-hero .obodesk-eyebrow {
@@ -233,10 +234,13 @@ body {
   align-items: center;
   gap: clamp(32px, 5vw, 72px);
   min-height: min(720px, calc(100svh - 5rem));
+  max-width: 100%;
 }
 
 .obodesk-hero__panel {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   min-height: 430px;
   border-radius: 22px;
   background: #ded8cc;
@@ -660,6 +664,21 @@ body {
   color: #111111;
 }
 
+@media (max-width: 1100px) {
+  .obodesk-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    min-height: auto;
+    padding-block: 64px 72px;
+  }
+
+  .obodesk-hero__panel {
+    max-width: 520px;
+    min-height: 360px;
+    margin-inline: auto;
+  }
+}
+
 @media (max-width: 900px) {
   .obodesk-hero__inner,
   .obodesk-split,
@@ -675,5 +694,91 @@ body {
 
   .obodesk-hero__panel {
     min-height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .obodesk-section {
+    padding-block: 44px;
+  }
+
+  .obodesk-section__header {
+    margin-block-end: 24px;
+  }
+
+  .obodesk-section h1 {
+    font-size: clamp(2.45rem, 14vw, 3.35rem);
+  }
+
+  .obodesk-section h2 {
+    font-size: clamp(1.75rem, 9vw, 2.45rem);
+  }
+
+  .obodesk-lede {
+    margin-block-start: 18px;
+    font-size: 1.05rem;
+  }
+
+  .obodesk-actions {
+    margin-block-start: 24px;
+  }
+
+  .obodesk-button {
+    min-height: 44px;
+    padding-inline: 16px;
+  }
+
+  .obodesk-hero__inner {
+    gap: 28px;
+    padding-block: 44px 48px;
+  }
+
+  .obodesk-hero__panel {
+    min-height: 250px;
+    border-radius: 16px;
+  }
+
+  .obodesk-card,
+  .obodesk-point {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .obodesk-card span {
+    margin-block-end: 28px;
+  }
+
+  .obodesk-point__tags {
+    padding-block-start: 22px;
+  }
+
+  .obodesk-lighting__steps span {
+    padding: 9px 12px;
+  }
+
+  .obodesk-product-card {
+    min-height: 0;
+  }
+
+  .obodesk-product-card__media {
+    aspect-ratio: 4 / 2.7;
+  }
+
+  .obodesk-product-card__body {
+    padding: 20px;
+  }
+
+  .obodesk-product-card p {
+    margin-block-end: 16px;
+  }
+
+  .obodesk-product-card__link {
+    min-height: 40px;
+    padding-block: 10px;
+  }
+
+  .obodesk-footer-cta {
+    margin-block-start: 40px;
+    padding: 28px 20px;
   }
 }
