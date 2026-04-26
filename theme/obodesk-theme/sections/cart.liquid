@@ -5,29 +5,80 @@
   https://shopify.dev/docs/storefronts/themes/architecture/templates/cart
 {% endcomment %}
 
-<h1>{{ 'cart.title' | t }}</h1>
+<section class="obodesk-cart">
+  <div class="obodesk-cart__hero">
+    <p class="obodesk-eyebrow">OboDesk Cart</p>
+    <h1>{{ 'cart.title' | t }}</h1>
+    <p>Review the essentials selected for your desk environment before checkout.</p>
+  </div>
 
-<form action="{{ routes.cart_url }}" method="post">
-  <table>
-    {% for item in cart.items %}
-      <tr>
-        <td>
-          {% render 'image', image: item.image, url: item.url %}
-        </td>
-        <td>
-          <p>{{ item.product.title }}</p>
-          {{ 'cart.remove' | t | link_to: item.url_to_remove }}
-        </td>
-        <td>
-          <input type="text" name="updates[]" value="{{ item.quantity }}">
+  {% if cart.items.size > 0 %}
+    <form class="obodesk-cart__form" action="{{ routes.cart_url }}" method="post">
+      <div class="obodesk-cart__layout">
+        <div class="obodesk-cart__items">
+          {% for item in cart.items %}
+            <article class="obodesk-cart__item">
+              <div class="obodesk-cart__media">
+                {% if item.image %}
+                  {% render 'image',
+                    class: 'obodesk-cart__image',
+                    image: item.image,
+                    url: item.url,
+                    width: 360,
+                    height: 360,
+                    crop: 'center'
+                  %}
+                {% else %}
+                  <a class="obodesk-cart__image obodesk-cart__image--placeholder" href="{{ item.url }}">
+                    <span>{{ item.product.title }}</span>
+                  </a>
+                {% endif %}
+              </div>
+
+              <div class="obodesk-cart__content">
+                <div>
+                  <h2>{{ item.product.title | link_to: item.url }}</h2>
+                  {% unless item.product.has_only_default_variant %}
+                    <p>{{ item.variant.title }}</p>
+                  {% endunless %}
+                  {{ 'cart.remove' | t | link_to: item.url_to_remove }}
+                </div>
+
+                <div class="obodesk-cart__controls">
+                  <label for="CartQuantity-{{ forloop.index }}">{{ 'cart.update' | t }}</label>
+                  <input id="CartQuantity-{{ forloop.index }}" type="number" name="updates[]" value="{{ item.quantity }}" min="0">
+                  <p>{{ item.final_line_price | money }}</p>
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+
+        <aside class="obodesk-cart__summary">
+          <h2>Order summary</h2>
+          <div class="obodesk-cart__summary-row">
+            <span>Subtotal</span>
+            <strong>{{ cart.total_price | money }}</strong>
+          </div>
+          <div class="obodesk-cart__summary-row obodesk-cart__summary-row--total">
+            <span>Total</span>
+            <strong>{{ cart.total_price | money }}</strong>
+          </div>
+          <p>Taxes, shipping, and discounts are calculated at checkout.</p>
           <input type="submit" value="{{ 'cart.update' | t }}">
-        </td>
-      </tr>
-    {% endfor %}
-  </table>
-
-  <input type="submit" name="checkout" value="{{ 'cart.checkout' | t }}">
-</form>
+          <input type="submit" name="checkout" value="{{ 'cart.checkout' | t }}">
+        </aside>
+      </div>
+    </form>
+  {% else %}
+    <div class="obodesk-cart__empty">
+      <p class="obodesk-eyebrow">Your desk is ready for a starting point</p>
+      <h2>Your cart is empty.</h2>
+      <p>Start with essentials that bring structure, focus, and flow to your workspace.</p>
+      <a class="obodesk-button obodesk-button--primary" href="{{ routes.all_products_collection_url }}">Explore essentials</a>
+    </div>
+  {% endif %}
+</section>
 
 {% schema %}
 {

@@ -942,6 +942,207 @@ body {
   line-height: 1.65;
 }
 
+/** OboDesk cart page V1 */
+.obodesk-cart {
+  padding-block: clamp(56px, 7vw, 96px);
+}
+
+.obodesk-cart__hero {
+  max-width: 760px;
+  margin-block-end: 32px;
+}
+
+.obodesk-cart__hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5.6rem);
+  line-height: 1.02;
+}
+
+.obodesk-cart__hero p:last-child {
+  max-width: 620px;
+  margin-block-start: 18px;
+  color: #596579;
+  line-height: 1.65;
+}
+
+.obodesk-cart__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.38fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+
+.obodesk-cart__items {
+  display: grid;
+  gap: 16px;
+}
+
+.obodesk-cart__item {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 10px;
+  background: #f3f0e8;
+}
+
+.obodesk-cart__image {
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e8e3d8;
+}
+
+.obodesk-cart__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.obodesk-cart__image--placeholder {
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  color: #5d5147;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.obodesk-cart__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.obodesk-cart__content h2 {
+  margin-block-end: 10px;
+  font-size: 1.08rem;
+  line-height: 1.2;
+}
+
+.obodesk-cart__content a {
+  color: #111111;
+  text-decoration: none;
+}
+
+.obodesk-cart__content p,
+.obodesk-cart__content div > a {
+  color: #596579;
+  line-height: 1.55;
+}
+
+.obodesk-cart__controls {
+  display: grid;
+  min-width: 120px;
+  gap: 8px;
+  justify-items: end;
+}
+
+.obodesk-cart__controls label {
+  color: #5d5147;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.obodesk-cart__controls input {
+  min-height: 40px;
+  width: 84px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  border-radius: 8px;
+  background: #fbfaf6;
+  color: #111111;
+  padding-inline: 10px;
+}
+
+.obodesk-cart__controls p {
+  color: #111111;
+  font-weight: 800;
+}
+
+.obodesk-cart__summary,
+.obodesk-cart__empty {
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 10px;
+  background: #17191d;
+  color: #ffffff;
+}
+
+.obodesk-cart__summary {
+  position: sticky;
+  top: 24px;
+  padding: clamp(22px, 3vw, 30px);
+}
+
+.obodesk-cart__summary h2 {
+  margin-block-end: 24px;
+  font-size: 1.35rem;
+}
+
+.obodesk-cart__summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 14px;
+  border-block-start: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.obodesk-cart__summary-row--total {
+  font-size: 1.14rem;
+}
+
+.obodesk-cart__summary p {
+  margin-block: 16px 22px;
+  color: #c9c4bb;
+  line-height: 1.55;
+}
+
+.obodesk-cart__summary input {
+  min-height: 48px;
+  width: 100%;
+  border: 1px solid #f8f5ed;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.obodesk-cart__summary input[type="submit"]:not([name="checkout"]) {
+  margin-block-end: 10px;
+  background: transparent;
+  color: #f8f5ed;
+}
+
+.obodesk-cart__summary input[name="checkout"] {
+  background: #f8f5ed;
+  color: #111111;
+}
+
+.obodesk-cart__empty {
+  padding: clamp(32px, 5vw, 56px);
+}
+
+.obodesk-cart__empty .obodesk-eyebrow,
+.obodesk-cart__empty p {
+  color: #c9c4bb;
+}
+
+.obodesk-cart__empty h2 {
+  margin-block-end: 14px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.obodesk-cart__empty .obodesk-button {
+  margin-block-start: 24px;
+  background: #f8f5ed;
+  border-color: #f8f5ed;
+  color: #111111;
+}
+
 @media (max-width: 1100px) {
   .obodesk-hero__inner {
     grid-template-columns: 1fr;
@@ -954,6 +1155,22 @@ body {
     max-width: 520px;
     min-height: 360px;
     margin-inline: auto;
+  }
+
+  .obodesk-cart {
+    padding-block: 44px;
+  }
+
+  .obodesk-cart__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .obodesk-cart__summary {
+    position: static;
+  }
+
+  .obodesk-cart__item {
+    grid-template-columns: 112px minmax(0, 1fr);
   }
 }
 
@@ -1110,5 +1327,33 @@ body {
   .obodesk-product__details article {
     min-height: 0;
     padding: 20px;
+  }
+
+}
+
+@media (max-width: 640px) {
+  .obodesk-cart__hero {
+    margin-block-end: 24px;
+  }
+
+  .obodesk-cart__hero h1 {
+    font-size: clamp(2.2rem, 12vw, 3.2rem);
+  }
+
+  .obodesk-cart__item {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .obodesk-cart__media {
+    max-width: 180px;
+  }
+
+  .obodesk-cart__content {
+    flex-direction: column;
+  }
+
+  .obodesk-cart__controls {
+    justify-items: start;
   }
 }
