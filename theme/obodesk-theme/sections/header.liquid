@@ -4,9 +4,13 @@
   </h2>
 
   <div class="header__menu">
-    {% for link in section.settings.menu.links %}
-      {{ link.title | link_to: link.url }}
-    {% endfor %}
+    <a href="{{ routes.root_url }}">Desk Setup</a>
+    <a href="{{ routes.root_url }}">Lighting</a>
+    <a href="{{ routes.root_url }}">Power</a>
+    <a href="{{ routes.root_url }}">Desk Infrastructure</a>
+    <a href="{{ routes.root_url }}">Kits</a>
+    <a href="{{ routes.root_url }}">Learn</a>
+    <a href="{{ routes.root_url }}">PRO</a>
   </div>
 
   <div class="header__icons">
@@ -32,6 +36,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1.5rem;
+  }
+  header .header__title {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
   }
   header a {
     position: relative;
@@ -54,6 +65,29 @@
   header .header__icons {
     display: flex;
     gap: 1rem;
+  }
+  header .header__menu {
+    flex: 1;
+    justify-content: center;
+    gap: clamp(0.75rem, 1.8vw, 1.5rem);
+  }
+  header .header__menu a {
+    color: rgba(51, 51, 51, 0.78);
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  header .header__menu a:hover {
+    color: var(--color-foreground);
+  }
+  header .header__icons {
+    flex-shrink: 0;
+  }
+  @media (max-width: 900px) {
+    header .header__menu {
+      display: none;
+    }
   }
 {% endstylesheet %}
 
