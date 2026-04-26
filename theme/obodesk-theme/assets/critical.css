@@ -392,6 +392,30 @@ body {
   margin-block-end: 12px;
 }
 
+.obodesk-point {
+  display: flex;
+  flex-direction: column;
+}
+
+.obodesk-point__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block-start: auto;
+  padding-block-start: 28px;
+}
+
+.obodesk-point__tags span {
+  padding: 7px 10px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 999px;
+  background: #f7f4ed;
+  color: #5d5147;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .obodesk-card--strong {
   background: #f5f1e8;
 }
