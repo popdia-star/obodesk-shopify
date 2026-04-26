@@ -201,7 +201,30 @@ body {
 }
 
 .obodesk-hero {
-  background: linear-gradient(135deg, #f7f7f3 0%, #ffffff 44%, #eaf0f5 100%);
+  background: #f3f0e8;
+  color: #111111;
+}
+
+.obodesk-hero .obodesk-eyebrow {
+  color: #6b6258;
+}
+
+.obodesk-hero .obodesk-lede {
+  color: #3f454c;
+}
+
+.obodesk-hero .obodesk-button {
+  border-radius: 8px;
+}
+
+.obodesk-hero .obodesk-button--primary {
+  background: #111111;
+  border-color: #111111;
+}
+
+.obodesk-hero .obodesk-button--secondary {
+  border-color: rgba(17, 17, 17, 0.28);
+  color: #111111;
 }
 
 .obodesk-hero__inner {
@@ -209,57 +232,129 @@ body {
   grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
   align-items: center;
   gap: clamp(32px, 5vw, 72px);
-  min-height: min(760px, calc(100svh - 5rem));
+  min-height: min(720px, calc(100svh - 5rem));
 }
 
 .obodesk-hero__panel {
   position: relative;
-  min-height: 420px;
-  border: 1px solid rgba(23, 32, 51, 0.12);
-  border-radius: 28px;
-  background: radial-gradient(circle at 70% 18%, rgba(98, 112, 132, 0.24), transparent 34%), #f2f4f1;
+  min-height: 430px;
+  border-radius: 22px;
+  background: #ded8cc;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 28px 90px rgba(17, 17, 17, 0.16);
   overflow: hidden;
+}
+
+.obodesk-hero__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent 42%),
+    radial-gradient(circle at 78% 20%, rgba(126, 112, 255, 0.22), transparent 30%);
+  pointer-events: none;
 }
 
 .obodesk-hero__surface,
 .obodesk-hero__screen,
 .obodesk-hero__dock,
-.obodesk-hero__glow {
+.obodesk-hero__ambient,
+.obodesk-hero__stand,
+.obodesk-hero__mat,
+.obodesk-hero__keyboard,
+.obodesk-hero__lightbar {
   position: absolute;
-  border-radius: 18px;
 }
 
 .obodesk-hero__surface {
-  right: 9%;
-  bottom: 18%;
-  width: 76%;
-  height: 28%;
-  background: #d9ddd7;
-  box-shadow: 0 24px 60px rgba(23, 32, 51, 0.16);
+  left: 6%;
+  right: 6%;
+  bottom: 12%;
+  height: 26%;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #8a5a35, #56341f);
+  box-shadow: 0 26px 70px rgba(17, 17, 17, 0.22);
 }
 
 .obodesk-hero__screen {
   left: 18%;
+  top: 13%;
+  width: 50%;
+  height: 36%;
+  border: 8px solid #1b1d20;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #0e0f12, #262a31);
+  box-shadow: 0 24px 50px rgba(17, 17, 17, 0.28);
+}
+
+.obodesk-hero__screen::after {
+  content: "";
+  position: absolute;
+  right: 10%;
   top: 16%;
-  width: 48%;
-  height: 32%;
-  background: #172033;
+  width: 34%;
+  height: 54%;
+  border-radius: 999px;
+  background: rgba(135, 118, 255, 0.22);
+  filter: blur(18px);
+}
+
+.obodesk-hero__stand {
+  left: 39%;
+  top: 48%;
+  width: 8%;
+  height: 18%;
+  border-radius: 10px 10px 4px 4px;
+  background: #2b2e33;
+}
+
+.obodesk-hero__mat {
+  left: 18%;
+  bottom: 18%;
+  width: 52%;
+  height: 18%;
+  border-radius: 14px;
+  background: #ece7dd;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .obodesk-hero__dock {
   right: 15%;
-  bottom: 27%;
-  width: 28%;
-  height: 11%;
-  background: #ffffff;
+  bottom: 24%;
+  width: 20%;
+  height: 9%;
+  border-radius: 12px;
+  background: #f8f6f0;
+  box-shadow: 0 12px 28px rgba(17, 17, 17, 0.16);
 }
 
-.obodesk-hero__glow {
-  right: 8%;
-  top: 18%;
-  width: 32%;
+.obodesk-hero__keyboard {
+  left: 25%;
+  bottom: 23%;
+  width: 30%;
+  height: 7%;
+  border-radius: 10px;
+  background: #25282d;
+  box-shadow: 0 10px 18px rgba(17, 17, 17, 0.18);
+}
+
+.obodesk-hero__lightbar {
+  right: 18%;
+  top: 16%;
+  width: 3px;
   height: 52%;
-  background: linear-gradient(180deg, rgba(201, 217, 236, 0.9), rgba(201, 217, 236, 0));
+  border-radius: 999px;
+  background: rgba(158, 132, 255, 0.72);
+  box-shadow: 0 0 22px rgba(118, 105, 255, 0.55);
+}
+
+.obodesk-hero__ambient {
+  right: 9%;
+  top: 10%;
+  width: 28%;
+  height: 52%;
+  border-radius: 999px;
+  background: rgba(117, 111, 255, 0.16);
+  filter: blur(34px);
 }
 
 .obodesk-grid {
@@ -364,10 +459,10 @@ body {
 
   .obodesk-hero__inner {
     min-height: auto;
-    padding-block: 72px;
+    padding-block: 56px 64px;
   }
 
   .obodesk-hero__panel {
-    min-height: 320px;
+    min-height: 300px;
   }
 }
