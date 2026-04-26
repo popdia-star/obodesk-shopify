@@ -9,12 +9,37 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "hello-world",
+    "hero": {
+      "type": "obodesk-hero",
+      "settings": {}
+    },
+    "core_system": {
+      "type": "obodesk-core-system",
+      "settings": {}
+    },
+    "lighting": {
+      "type": "obodesk-lighting",
+      "settings": {}
+    },
+    "kits": {
+      "type": "obodesk-kits",
+      "settings": {}
+    },
+    "why": {
+      "type": "obodesk-why",
+      "settings": {}
+    },
+    "featured_products": {
+      "type": "featured-products",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "hero",
+    "core_system",
+    "lighting",
+    "kits",
+    "why",
+    "featured_products"
   ]
 }

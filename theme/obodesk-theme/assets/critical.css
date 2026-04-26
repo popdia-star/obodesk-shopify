@@ -115,3 +115,259 @@ body {
 .shopify-section > .full-width {
   grid-column: 1 / -1;
 }
+
+/** OboDesk homepage V1 */
+.obodesk-section {
+  padding-block: clamp(64px, 8vw, 112px);
+}
+
+.obodesk-container {
+  width: min(calc(100% - var(--page-margin) * 2), calc(var(--page-width) - var(--page-margin) * 2));
+  margin-inline: auto;
+}
+
+.obodesk-section__header {
+  max-width: 760px;
+  margin-block-end: 32px;
+}
+
+.obodesk-eyebrow {
+  margin-block-end: 12px;
+  color: #627084;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.obodesk-section h1,
+.obodesk-section h2,
+.obodesk-section h3 {
+  line-height: 1.05;
+}
+
+.obodesk-section h1 {
+  max-width: 760px;
+  font-size: clamp(3rem, 7vw, 6.6rem);
+}
+
+.obodesk-section h2 {
+  max-width: 720px;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.obodesk-section h3 {
+  font-size: 1.15rem;
+}
+
+.obodesk-section p {
+  color: #596579;
+  line-height: 1.65;
+}
+
+.obodesk-lede {
+  max-width: 620px;
+  margin-block-start: 22px;
+  font-size: clamp(1.08rem, 2vw, 1.35rem);
+}
+
+.obodesk-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-block-start: 32px;
+}
+
+.obodesk-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid #172033;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.obodesk-button--primary {
+  background: #172033;
+  color: #ffffff;
+}
+
+.obodesk-button--secondary {
+  background: transparent;
+  color: #172033;
+}
+
+.obodesk-hero {
+  background: linear-gradient(135deg, #f7f7f3 0%, #ffffff 44%, #eaf0f5 100%);
+}
+
+.obodesk-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  align-items: center;
+  gap: clamp(32px, 5vw, 72px);
+  min-height: min(760px, calc(100svh - 5rem));
+}
+
+.obodesk-hero__panel {
+  position: relative;
+  min-height: 420px;
+  border: 1px solid rgba(23, 32, 51, 0.12);
+  border-radius: 28px;
+  background: radial-gradient(circle at 70% 18%, rgba(98, 112, 132, 0.24), transparent 34%), #f2f4f1;
+  overflow: hidden;
+}
+
+.obodesk-hero__surface,
+.obodesk-hero__screen,
+.obodesk-hero__dock,
+.obodesk-hero__glow {
+  position: absolute;
+  border-radius: 18px;
+}
+
+.obodesk-hero__surface {
+  right: 9%;
+  bottom: 18%;
+  width: 76%;
+  height: 28%;
+  background: #d9ddd7;
+  box-shadow: 0 24px 60px rgba(23, 32, 51, 0.16);
+}
+
+.obodesk-hero__screen {
+  left: 18%;
+  top: 16%;
+  width: 48%;
+  height: 32%;
+  background: #172033;
+}
+
+.obodesk-hero__dock {
+  right: 15%;
+  bottom: 27%;
+  width: 28%;
+  height: 11%;
+  background: #ffffff;
+}
+
+.obodesk-hero__glow {
+  right: 8%;
+  top: 18%;
+  width: 32%;
+  height: 52%;
+  background: linear-gradient(180deg, rgba(201, 217, 236, 0.9), rgba(201, 217, 236, 0));
+}
+
+.obodesk-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.obodesk-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.obodesk-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.obodesk-card,
+.obodesk-point,
+.obodesk-product-card {
+  min-height: 220px;
+  padding: 24px;
+  border: 1px solid rgba(23, 32, 51, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.obodesk-card span {
+  display: inline-block;
+  margin-block-end: 48px;
+  color: #8a94a3;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.obodesk-card h3,
+.obodesk-point h3,
+.obodesk-product-card h3 {
+  margin-block-end: 12px;
+}
+
+.obodesk-card--strong {
+  background: #f5f1e8;
+}
+
+.obodesk-lighting {
+  background: #172033;
+  color: #ffffff;
+}
+
+.obodesk-lighting .obodesk-eyebrow,
+.obodesk-lighting p {
+  color: #d4dce7;
+}
+
+.obodesk-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+
+.obodesk-lighting__steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-start: 28px;
+}
+
+.obodesk-lighting__steps span {
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: #ffffff;
+}
+
+.obodesk-product-card__media {
+  aspect-ratio: 4 / 3;
+  margin-block-end: 18px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e4e8e2, #f7f7f3);
+}
+
+.obodesk-footer-cta {
+  margin-block-start: clamp(48px, 6vw, 80px);
+  padding: clamp(32px, 5vw, 64px);
+  border-radius: 8px;
+  background: #f1f4f7;
+  text-align: center;
+}
+
+.obodesk-footer-cta h2 {
+  margin-inline: auto;
+  margin-block-end: 24px;
+}
+
+@media (max-width: 900px) {
+  .obodesk-hero__inner,
+  .obodesk-split,
+  .obodesk-grid--three,
+  .obodesk-grid--four {
+    grid-template-columns: 1fr;
+  }
+
+  .obodesk-hero__inner {
+    min-height: auto;
+    padding-block: 72px;
+  }
+
+  .obodesk-hero__panel {
+    min-height: 320px;
+  }
+}
