@@ -39,6 +39,8 @@
 {% stylesheet %}
   header {
     height: 5rem;
+    position: relative;
+    z-index: 20;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,9 +75,12 @@
     gap: 1rem;
   }
   header .header__menu {
+    position: relative;
+    z-index: 21;
     flex: 1;
     justify-content: center;
     gap: clamp(0.75rem, 1.8vw, 1.5rem);
+    pointer-events: auto;
   }
   header .header__menu a {
     color: rgba(51, 51, 51, 0.78);
@@ -83,6 +88,7 @@
     font-weight: 700;
     line-height: 1;
     white-space: nowrap;
+    pointer-events: auto;
   }
   header .header__menu a:hover {
     color: var(--color-foreground);
