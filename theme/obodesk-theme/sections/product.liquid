@@ -5,41 +5,94 @@
   https://shopify.dev/docs/storefronts/themes/architecture/templates/product
 {% endcomment %}
 
-<div class="product-images">
-  {% for image in product.images %}
-    {% render 'image', class: 'product-image', image: image %}
-  {% endfor %}
-</div>
-
-<div class="product-info">
-  <h1>{{ product.title }}</h1>
-  <p>{{ product.price | money }}</p>
-  <p>{{ product.description }}</p>
-</div>
-
-<div class="product-form">
-  {% form 'product', product %}
-    {% assign current_variant = product.selected_or_first_available_variant %}
-
-    <select name="id">
-      {% for variant in product.variants %}
-        <option
-          value="{{ variant.id }}"
-          {% if variant == current_variant %}
-            selected="selected"
+<section class="obodesk-product">
+  <div class="obodesk-product__layout">
+    <div class="obodesk-product__media">
+      {% if product.media.size > 0 %}
+        {% for media in product.media %}
+          {% if media.media_type == 'image' %}
+            {% render 'image',
+              class: 'obodesk-product__image',
+              image: media.preview_image,
+              width: 1200,
+              height: 1200,
+              crop: 'center'
+            %}
           {% endif %}
-        >
-          {{ variant.title }} - {{ variant.price | money }}
-        </option>
-      {% endfor %}
-    </select>
+        {% endfor %}
+      {% elsif product.images.size > 0 %}
+        {% for image in product.images %}
+          {% render 'image',
+            class: 'obodesk-product__image',
+            image: image,
+            width: 1200,
+            height: 1200,
+            crop: 'center'
+          %}
+        {% endfor %}
+      {% else %}
+        <div class="obodesk-product__image obodesk-product__image--placeholder">
+          <span>{{ product.title }}</span>
+        </div>
+      {% endif %}
+    </div>
 
-    <input type="text" name="quantity" min="1" value="1">
+    <div class="obodesk-product__purchase">
+      <div class="obodesk-product__summary">
+        <p class="obodesk-eyebrow">OboDesk Essential</p>
+        <h1>{{ product.title }}</h1>
+        <p class="obodesk-product__price">{{ product.price | money }}</p>
 
-    <input type="submit" value="Add to cart">
-    {{ form | payment_button }}
-  {% endform %}
-</div>
+        {% if product.description != blank %}
+          <div class="obodesk-product__description">
+            {{ product.description }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="obodesk-product__form">
+        {% form 'product', product %}
+          {% assign current_variant = product.selected_or_first_available_variant %}
+
+          <label for="ProductVariant-{{ section.id }}">Configuration</label>
+          <select id="ProductVariant-{{ section.id }}" name="id">
+            {% for variant in product.variants %}
+              <option
+                value="{{ variant.id }}"
+                {% if variant == current_variant %}
+                  selected="selected"
+                {% endif %}
+              >
+                {{ variant.title }} - {{ variant.price | money }}
+              </option>
+            {% endfor %}
+          </select>
+
+          <label for="ProductQuantity-{{ section.id }}">Quantity</label>
+          <input id="ProductQuantity-{{ section.id }}" type="number" name="quantity" min="1" value="1">
+
+          <input type="submit" value="Add to cart">
+          {{ form | payment_button }}
+        {% endform %}
+      </div>
+    </div>
+  </div>
+
+  <div class="obodesk-product__details">
+    <article>
+      <h2>Desk environment fit</h2>
+      <p>Designed to support a cleaner, more intentional desk environment without adding visual noise.</p>
+    </article>
+    <article>
+      <h2>Why it belongs on your desk</h2>
+      <p>Selected for structure, focus, and daily flow across modern work sessions.</p>
+    </article>
+    <article>
+      <h2>Setup notes</h2>
+      <p>Pair with complementary desk essentials to build a more complete OboDesk setup.</p>
+    </article>
+  </div>
+</section>
 
 {% schema %}
 {
