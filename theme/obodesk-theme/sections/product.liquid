@@ -54,19 +54,23 @@
         {% form 'product', product %}
           {% assign current_variant = product.selected_or_first_available_variant %}
 
-          <label for="ProductVariant-{{ section.id }}">Configuration</label>
-          <select id="ProductVariant-{{ section.id }}" name="id">
-            {% for variant in product.variants %}
-              <option
-                value="{{ variant.id }}"
-                {% if variant == current_variant %}
-                  selected="selected"
-                {% endif %}
-              >
-                {{ variant.title }} - {{ variant.price | money }}
-              </option>
-            {% endfor %}
-          </select>
+          {% if product.has_only_default_variant or product.variants.size == 1 %}
+            <input type="hidden" name="id" value="{{ current_variant.id }}">
+          {% else %}
+            <label for="ProductVariant-{{ section.id }}">Configuration</label>
+            <select id="ProductVariant-{{ section.id }}" name="id">
+              {% for variant in product.variants %}
+                <option
+                  value="{{ variant.id }}"
+                  {% if variant == current_variant %}
+                    selected="selected"
+                  {% endif %}
+                >
+                  {{ variant.title }} - {{ variant.price | money }}
+                </option>
+              {% endfor %}
+            </select>
+          {% endif %}
 
           <label for="ProductQuantity-{{ section.id }}">Quantity</label>
           <input id="ProductQuantity-{{ section.id }}" type="number" name="quantity" min="1" value="1">
