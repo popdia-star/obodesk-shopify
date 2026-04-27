@@ -75,7 +75,7 @@
       <p class="obodesk-eyebrow">Your desk is ready for a starting point</p>
       <h2>Your cart is empty.</h2>
       <p>Start with essentials that bring structure, focus, and flow to your workspace.</p>
-      <a class="obodesk-button obodesk-button--primary" href="{{ routes.all_products_collection_url }}">Explore essentials</a>
+      <a class="obodesk-button obodesk-button--primary" href="{{ collections['desk-setup'].url | default: routes.root_url }}">Explore essentials</a>
     </div>
   {% endif %}
 </section>

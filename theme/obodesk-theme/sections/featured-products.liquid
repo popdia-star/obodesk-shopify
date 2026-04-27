@@ -14,7 +14,7 @@
         <span class="obodesk-product-card__tag">Structure</span>
         <h3>Signature Monitor Riser</h3>
         <p>Build structure into the center of your desk.</p>
-        <a class="obodesk-product-card__link" href="{{ routes.all_products_collection_url }}">View essential</a>
+        <a class="obodesk-product-card__link" href="{{ collections['desk-setup'].url | default: routes.root_url }}">View essential</a>
       </div>
     </article>
 
@@ -26,7 +26,7 @@
         <span class="obodesk-product-card__tag">Surface</span>
         <h3>Essential Desk Mat</h3>
         <p>Create a calmer surface for focus and flow.</p>
-        <a class="obodesk-product-card__link" href="{{ routes.all_products_collection_url }}">View essential</a>
+        <a class="obodesk-product-card__link" href="{{ collections['desk-setup'].url | default: routes.root_url }}">View essential</a>
       </div>
     </article>
 
@@ -38,7 +38,7 @@
         <span class="obodesk-product-card__tag">Atmosphere</span>
         <h3>Screen Sync Light</h3>
         <p>Add depth and atmosphere without visual clutter.</p>
-        <a class="obodesk-product-card__link" href="{{ routes.all_products_collection_url }}">View essential</a>
+        <a class="obodesk-product-card__link" href="{{ collections['lighting'].url | default: routes.root_url }}">View essential</a>
       </div>
     </article>
 
@@ -50,7 +50,7 @@
         <span class="obodesk-product-card__tag">Lighting</span>
         <h3>Monitor Light Bar</h3>
         <p>Cleaner task lighting for a more professional desk.</p>
-        <a class="obodesk-product-card__link" href="{{ routes.all_products_collection_url }}">View essential</a>
+        <a class="obodesk-product-card__link" href="{{ collections['lighting'].url | default: routes.root_url }}">View essential</a>
       </div>
     </article>
   </div>
@@ -58,7 +58,7 @@
   <div class="obodesk-footer-cta">
     <p class="obodesk-eyebrow">Ready when your desk is</p>
     <h2>Start with the desk. Improve the way you work.</h2>
-    <a class="obodesk-button obodesk-button--primary" href="{{ routes.all_products_collection_url }}">Explore all essentials</a>
+    <a class="obodesk-button obodesk-button--primary" href="{{ collections['desk-setup'].url | default: routes.root_url }}">Explore all essentials</a>
   </div>
 </section>
 
