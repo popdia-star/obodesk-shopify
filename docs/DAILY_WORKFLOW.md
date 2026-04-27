@@ -6,13 +6,49 @@ OboDesk Shopify Theme
 
 ## 当前 live theme 状态
 
-当前主题处于 V1 搭建后的检查和小范围优化阶段。首页、Collection 页面、Product 页面、Cart 页面已经完成基础版本，Header 导航已回退为 5 个 collection 导航。
+当前主题处于 V1 搭建后的收尾检查阶段。首页、Collection 页面、Product 页面、Cart 页面已经完成基础版本，Header 导航已回退为 5 个 collection 导航。
 
 首页和购物车中的 All Products 链接已完成修复，并已提交、推送到 live theme。正式站 `obodesk.com` 已验证生效。
 
-正式站产品 `Test Desk Product` 已验证可以进入 checkout，Checkout 页面显示商品 `$1.00`，PayPal / Venmo / PayPal payment 支付入口正常显示。Product → Add to cart → Cart → Checkout 主购买链路已验证通过。
+正式站产品购买闭环已验证通过：Product → Add to cart → Cart → Checkout 可以跑通，Checkout 页面显示 PayPal / Venmo / PayPal payment 支付入口正常。
 
-产品图片缺失问题已完成排查。Shopify 后台已给 `Test Desk Product` 上传产品图，正式站 Desk Setup collection 产品卡片图片、Product 页面产品主图、Cart 页面商品缩略图、Checkout 页面商品缩略图均已正常展示。
+产品图片缺失问题已确认是 Shopify 后台产品数据问题，不是 theme 图片渲染问题。Shopify 后台已给 `Test Desk Product` 上传产品图，Collection / Product / Cart / Checkout 商品图均已正常展示。
+
+Product 页面已完成可售状态体验优化：`product.liquid` 增加 `current_variant.available` 判断，可售时显示 Add to cart 和 Buy it now，不可售时显示 Sold out disabled。最新提交为 `32ff019 add product availability button state`，已推送到 live theme。
+
+当前 Git 状态：`git status --short` 干净。
+
+## 今天已完成
+
+1. 修复 `docs/DAILY_WORKFLOW.md` 编码问题，并提交。
+
+2. 修复首页与购物车中的 All Products 链接：
+   - Hero Explore essentials → Desk Setup collection
+   - Featured Essentials 产品卡片 → Desk Setup / Lighting collection
+   - Explore all essentials CTA → Desk Setup collection
+   - Empty cart Explore essentials → Desk Setup collection
+   - 已提交并推送到 live theme
+   - 正式站 `obodesk.com` 已验证生效
+
+3. 验证购买闭环：
+   - Product → Add to cart → Cart → Checkout 已跑通
+   - Checkout 显示 PayPal / Venmo / PayPal payment 入口正常
+
+4. 修复产品图片数据问题：
+   - Shopify 后台已给 `Test Desk Product` 上传产品图
+   - Collection / Product / Cart / Checkout 商品图均已正常展示
+   - 确认不是 theme 图片渲染问题
+
+5. 优化 Product 页面可售状态：
+   - `product.liquid` 增加 `current_variant.available` 判断
+   - 可售时显示 Add to cart 和 Buy it now
+   - 不可售时显示 Sold out disabled
+   - 已提交：`add product availability button state`
+   - 已推送到 live theme
+
+6. 当前 Git 状态：
+   - `git status --short` 干净
+   - 最新提交：`32ff019 add product availability button state`
 
 ## 已完成事项
 
@@ -22,33 +58,58 @@ OboDesk Shopify Theme
 - Cart 页面 V1
 - Header 导航已回退为 5 个 collection 导航
 - 首页和购物车 All Products 链接修复
-  - Hero Explore essentials 改为 Desk Setup collection
-  - Featured Essentials 卡片链接改为 Desk Setup / Lighting collection
-  - Footer CTA Explore all essentials 改为 Desk Setup collection
-  - Empty cart Explore essentials 改为 Desk Setup collection
-  - 修改已提交并推送到 live theme
-  - 正式站 `obodesk.com` 验证已生效
 - 购买闭环验证
-  - 正式站产品 `Test Desk Product` 可以进入 checkout
-  - Checkout 页面显示商品 `$1.00`
-  - PayPal / Venmo / PayPal payment 支付入口正常显示
-  - Product → Add to cart → Cart → Checkout 主购买链路已验证通过
-- 产品图片缺失问题排查
-  - Shopify 后台已给 `Test Desk Product` 上传产品图
-  - 正式站 Desk Setup collection 产品卡片图片已正常展示
-  - Product 页面产品主图已正常展示
-  - Cart 页面商品缩略图已正常展示
-  - Checkout 页面商品缩略图已正常展示
-  - 暂不需要修改 `product.liquid` / `collection.liquid` / `cart.liquid` / `image.liquid`
+- 产品图片缺失问题排查和后台数据修复
+- Product 页面 available / Sold out / disabled 状态优化
+
+## 明天建议任务计划
+
+1. 正式站最终人工复测：
+   - 首页导航
+   - 首页 CTA
+   - Collection 页面
+   - Product 页面
+   - Cart 页面
+   - Checkout 页面
+
+2. 清理测试数据：
+   - 决定是否隐藏或删除 `Test Desk Product`
+   - 将 Signature Monitor Riser 作为真实主产品
+   - 检查产品标题、价格、描述、图片是否符合 OboDesk V1 定位
+
+3. 首页内容清理：
+   - Featured Essentials 是否继续用静态卡片，还是改为真实产品 / collection
+   - 检查 Hero 文案是否需要从 `Build Your Desk Environment` 升级为 `Orchestrate Your Flow`
+
+4. 店铺基础页面检查：
+   - Contact
+   - Shipping
+   - Refund policy
+   - Privacy policy
+   - Terms of service
+
+5. V1 发布前检查清单：
+   - 移动端显示
+   - 商品库存
+   - 支付入口
+   - 域名正式访问
+   - Footer 信息
+   - 是否仍有 Powered by Shopify
+
+6. 明天原则：
+   - 先只读检查，不要直接改 theme
+   - 每次只改一个小范围
+   - 每轮修改后 theme check
+   - 修改后本地预览验证
+   - 确认后提交并推送 live theme
 
 ## 当前待办事项
 
-- 运行 theme check
-- 本地预览检查首页 / collection / product / cart
-- 根据检查结果再做小范围修复
-- Product 页面后续可优化 available / Sold out / disabled 状态显示
-- 后续再排查是否存在偶发 POST 422 /cart/add
-- 当前不建议立刻修改 `product.liquid`，避免影响已跑通的购买链路
+- 正式站最终人工复测
+- 清理测试产品和测试数据
+- 确认真实主产品内容
+- 检查店铺基础页面和政策页面
+- V1 发布前移动端、库存、支付、域名、Footer 信息检查
 
 ## Git 工作流
 
