@@ -75,8 +75,12 @@
           <label for="ProductQuantity-{{ section.id }}">Quantity</label>
           <input id="ProductQuantity-{{ section.id }}" type="number" name="quantity" min="1" value="1">
 
-          <input type="submit" value="Add to cart">
-          {{ form | payment_button }}
+          {% if current_variant.available %}
+            <input type="submit" value="Add to cart">
+            {{ form | payment_button }}
+          {% else %}
+            <input type="submit" value="Sold out" disabled>
+          {% endif %}
         {% endform %}
       </div>
     </div>
