@@ -1,35 +1,54 @@
-OboDesk Shopify 日常开发流程
+# OboDesk Shopify Theme 日常工作流
 
-1. 启动本地预览
-cd D:\My-AiOS\10_Workspace\WORK\shopify-projects\obodesk-shopify\theme\obodesk-theme
-shopify theme dev --store obo-5.myshopify.com
+## 项目名称
 
-2. 打开浏览器预览
-http://127.0.0.1:9292
+OboDesk Shopify Theme
 
-3. 另开一个 PowerShell 启动 Codex
-cd D:\My-AiOS\10_Workspace\WORK\shopify-projects\obodesk-shopify
-codex
+## 当前 live theme 状态
 
-4. 给 Codex 的安全指令
-先不要修改任何文件。请先分析并列出你准备修改哪些文件，等我确认后再执行。
+当前主题处于 V1 搭建后的检查阶段。首页、Collection 页面、Product 页面、Cart 页面已经完成基础版本，Header 导航已回退为 5 个 collection 导航。
 
-5. Codex 修改后检查主题
-cd D:\My-AiOS\10_Workspace\WORK\shopify-projects\obodesk-shopify\theme\obodesk-theme
-shopify theme check
+## 已完成事项
 
-6. 浏览器查看效果
-http://127.0.0.1:9292
+- 首页 V1
+- Collection 页面 V1
+- Product 页面 V1
+- Cart 页面 V1
+- Header 导航已回退为 5 个 collection 导航
 
-7. Git 查看状态
-cd D:\My-AiOS\10_Workspace\WORK\shopify-projects\obodesk-shopify
-git status
+## 当前待办事项
 
-8. 添加指定文件
-git add 文件路径
+- 运行 theme check
+- 本地预览检查首页 / collection / product / cart
+- 修复首页和购物车中仍跳向 all_products 的入口
+- 根据检查结果再做小范围修复
 
-9. 提交
-git commit -m "本次修改说明"
+## Git 工作流
 
-10. 确认干净
-git status
+1. 修改前先检查工作区状态：
+
+   ```powershell
+   git status
+   ```
+
+2. 每轮改动后运行 Shopify Theme Check：
+
+   ```powershell
+   cd D:\My-AiOS\10_Workspace\WORK\shopify-projects\obodesk-shopify\theme\obodesk-theme
+   shopify theme check
+   ```
+
+3. 确认改动内容：
+
+   ```powershell
+   cd D:\My-AiOS\10_Workspace\WORK\shopify-projects\obodesk-shopify
+   git diff
+   git status
+   ```
+
+4. 确认后再提交：
+
+   ```powershell
+   git add docs/DAILY_WORKFLOW.md
+   git commit -m "update daily workflow docs"
+   ```
