@@ -140,3 +140,18 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
    git add docs/DAILY_WORKFLOW.md
    git commit -m "update daily workflow docs"
    ```
+
+## 2026-04-28 Product salability investigation
+
+- Old `Signature Monitor Riser` showed `Sold out` on the live storefront.
+- Sidekick and Liquid debug showed an inconsistency in product salability state.
+- Direct `/cart/add` tests confirmed old `signature-monitor-riser` and `signature-monitor-riser-v2` were not purchasable.
+- Final replacement used the verified purchasable `Test Desk Product` configuration to create a new product:
+  - `/products/signature-monitor-riser-live`
+- New `Signature Monitor Riser Live` now displays `Add to cart` / `Buy it now` correctly.
+- Price is correct at `$89.00`.
+- Product image displays correctly.
+- Old `signature-monitor-riser` and `signature-monitor-riser-v2` have been set to `Draft`.
+- `signature-monitor-riser-live` has been added to the `Desk Setup` collection.
+- Conclusion: this round was mainly caused by abnormal Shopify product data / inventory configuration, not theme code.
+- Follow-up: confirm whether Home `Featured Essentials` should link directly to `/products/signature-monitor-riser-live`.
