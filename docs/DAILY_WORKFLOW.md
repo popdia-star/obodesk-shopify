@@ -307,3 +307,21 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Contact / Privacy Policy / Shipping and Taxes / Refund Policy / Support / About Us / FAQ 页面可正常打开。
 - 客服邮箱统一显示为 obosupport@gmail.com。
 - 当前信任页基础整理和访客路径复测通过。
+
+## 2026-04-29 Footer V1 品牌化优化记录
+
+- 已完成 OboDesk Footer V1 品牌化优化。
+- 已推送到 live theme。
+- 修改文件：
+  - theme/obodesk-theme/sections/footer.liquid
+  - theme/obodesk-theme/assets/critical.css
+- Footer 从默认链接平铺升级为品牌收口区 + Navigation + 底部版权/支付图标。
+- 已移除 Powered by Shopify。
+- 已显示 OboDesk 品牌说明。
+- 已显示客服邮箱 obosupport@gmail.com。
+- 已显示响应时间 Usually replies within 1-2 business days。
+- 保留现有 footer menu 动态链接。
+- 保留 payment icons。
+- 本地预览和正式站验证通过。
+- 整体符合克制、专业、系统感的 footer 气质。
+- 当前 V1 暂不升级为 Shop by System / Support / Company 三列，避免过度复杂化。
