@@ -232,3 +232,18 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - 结论：
   - Footer 链接功能已打通
   - 下一步优先优化 Contact Us 页面内容，其次再优化 Policy 页面视觉和品牌文案
+
+## 2026-04-29 Contact Us 页面更新记录
+
+- Contact Us 页面此前内容过少，基本只有标题。
+- 已通过 Shopify 后台更新 Contact Us 页面正文。
+- 页面 URL 保持为 /pages/contact。
+- 页面已包含：
+  - 订单和桌面搭建咨询说明
+  - 客服邮箱 support@obodesk.com
+  - 响应时间 1-2 business days
+  - 订单问题所需信息
+  - 退换货和保修问题所需信息
+  - Business & Bulk Orders 联系说明
+- 正式站 /pages/contact 已验证内容正常显示。
+- 当前仍待优化：页面视觉排版较基础，后续可统一优化 page 模板样式。
