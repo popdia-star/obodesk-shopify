@@ -155,3 +155,41 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - `signature-monitor-riser-live` has been added to the `Desk Setup` collection.
 - Conclusion: this round was mainly caused by abnormal Shopify product data / inventory configuration, not theme code.
 - Follow-up: confirm whether Home `Featured Essentials` should link directly to `/products/signature-monitor-riser-live`.
+
+## 2026-04-28 收尾记录
+
+已完成：
+1. 排查 Signature Monitor Riser 售罄问题。
+2. 确认旧产品 /products/signature-monitor-riser 前台显示 Sold out，且直接 /cart/add 测试不可购买。
+3. 新建的 /products/signature-monitor-riser-v2 也不可购买，因此不再继续修复旧坏产品。
+4. 最终使用已验证可购买的 Test Desk Product 配置，复制/创建出新的正式主产品：
+   - /products/signature-monitor-riser-live
+5. 新主产品 Signature Monitor Riser Live 已验证：
+   - 产品页正常打开
+   - 产品图正常显示
+   - 价格 $89.00 正常
+   - Add to cart 正常显示
+   - Buy it now 正常显示
+6. 旧产品处理：
+   - /products/signature-monitor-riser 已设置为 Draft
+   - /products/signature-monitor-riser-v2 已设置为 Draft
+7. Collection 处理：
+   - signature-monitor-riser-live 已加入 Desk Setup collection
+8. 首页 Featured Essentials 处理：
+   - 第一张 Signature Monitor Riser 卡片已从 Desk Setup collection 链接改为直接链接：
+     /products/signature-monitor-riser-live
+9. 代码提交与上线：
+   - 提交：cca7fcf link featured riser card to live product
+   - 已推送到 live theme：OboDesk V1 Local Build #153947996300
+10. 当前状态：
+   - git status 干净
+   - 主产品入口、产品页、加购链路已恢复正常
+
+今天建议任务：
+1. 正式站复测首页 Featured Essentials → Signature Monitor Riser 是否直达 /products/signature-monitor-riser-live。
+2. 复测新主产品 Add to cart → Cart → Checkout。
+3. 检查 Desk Setup collection 是否只展示可购买主产品和必要测试产品。
+4. 决定是否隐藏 Test Desk Product。
+5. 检查首页其他 3 张 Featured Essentials 卡片是否继续保留静态占位，还是改为真实产品。
+6. 检查 footer / policy / contact / shipping 页面。
+7. 今天原则：先复测和内容清理，不要大改 theme。
