@@ -202,3 +202,33 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Desk Setup collection 已确认只展示正式主产品 Signature Monitor Riser。
 - 正式主产品价格 $89.00，产品图正常显示。
 - 当前 Collection 清理已完成。
+
+## 2026-04-29 Footer 配置记录
+
+- Footer menu handle 为 footer。
+- 原因：live theme footer section 的 menu 为空，导致正式站底部不显示导航链接。
+- 已将 footer-group.json 中 Footer section 的 menu 绑定为 footer。
+- theme check 通过。
+- 已推送到 live theme。
+- 正式站底部已显示 Footer 链接：
+  Search / Privacy Policy / Terms of Service / Shipping & Taxes / Refund Policy / Contact Us / Your Privacy Choices / About Us / FAQ
+- 后续待办：逐个检查核心 Footer 页面内容是否完整。
+
+## 2026-04-29 Footer 与基础页面检查记录
+
+- Footer menu 已成功显示在正式站底部。
+- Footer links 已出现：Search / Privacy Policy / Terms of Service / Shipping & Taxes / Refund Policy / Contact Us / Your Privacy Choices / About Us / FAQ。
+- 已检查核心页面不是 404：
+  - Refund Policy 可打开
+  - Shipping & Taxes 可打开
+  - Privacy Policy 可打开
+  - Terms of Service 可打开
+  - Contact Us 可打开
+- 当前问题：
+  - Footer 页面整体排版较简陋
+  - Contact Us 页面内容明显不足，目前基本只有标题
+  - Policy 页面内容可读但偏基础，后续需要品牌化和英文版优化
+  - Powered by Shopify 仍显示，后续决定是否移除
+- 结论：
+  - Footer 链接功能已打通
+  - 下一步优先优化 Contact Us 页面内容，其次再优化 Policy 页面视觉和品牌文案
