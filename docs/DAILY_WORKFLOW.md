@@ -193,3 +193,12 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 5. 检查首页其他 3 张 Featured Essentials 卡片是否继续保留静态占位，还是改为真实产品。
 6. 检查 footer / policy / contact / shipping 页面。
 7. 今天原则：先复测和内容清理，不要大改 theme。
+
+## 2026-04-29 产品清理记录
+
+- Test Desk Product 已设置为 Draft，不再显示在 Online Store storefront。
+- Test Desk Product 未删除，保留为可恢复测试产品。
+- Signature Monitor Riser Live 保持 Active，并发布到 Online Store。
+- Desk Setup collection 已确认只展示正式主产品 Signature Monitor Riser。
+- 正式主产品价格 $89.00，产品图正常显示。
+- 当前 Collection 清理已完成。
