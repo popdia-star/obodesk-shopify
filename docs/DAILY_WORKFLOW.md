@@ -294,3 +294,16 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Policy / Support / FAQ 等页面内容后续还可以继续品牌化、法务化和视觉细节优化。
 - Powered by Shopify 是否移除待决定。
 - 下一阶段建议：检查 checkout / footer / policy 页面在无痕访客视图下的最终表现。
+
+## 2026-04-29 无痕访客视图最终复测记录
+
+- 使用无痕窗口访问 obodesk.com。
+- 确认没有 Shopify preview/admin bar。
+- 首页 Featured Essentials 第一张 Signature Monitor Riser 可进入正式商品页。
+- 商品页 Add to cart / Buy it now 正常。
+- Cart 页面产品、价格、数量显示正常。
+- Checkout 可进入支付页。
+- Footer 核心链接均可打开，不是 404。
+- Contact / Privacy Policy / Shipping and Taxes / Refund Policy / Support / About Us / FAQ 页面可正常打开。
+- 客服邮箱统一显示为 obosupport@gmail.com。
+- 当前信任页基础整理和访客路径复测通过。
