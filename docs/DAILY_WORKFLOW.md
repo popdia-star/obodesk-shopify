@@ -258,3 +258,39 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - 当前判断：内容可用，但文案偏通用，后续可品牌化优化。
 - 更主要的问题是基础 page 模板整体排版较简陋，包括页面宽度、段落间距、标题层级和 footer 对齐。
 - 下一步建议：不要继续逐页手动补内容，改为统一优化 page 模板样式。
+
+## 2026-04-29 信任页基础整理收尾记录
+
+已完成：
+- Footer menu 已在正式站底部正常显示。
+- 普通 page 页面样式已优化并上线。
+- Contact Us 页面已补充英文客服内容。
+- Privacy Policy 页面已修正：原本误放了 Returns and Warranty 内容，已替换为正确英文隐私政策。
+- Shipping and Taxes 页面已替换为英文内容，并完成基础富文本排版。
+- Refund Policy / Returns and Warranty 页面已更新英文内容。
+- Support 页面已替换为英文客服支持内容。
+- 客服邮箱已统一为 obosupport@gmail.com。
+- Shopify Sidekick 已替换旧邮箱 support@obodesk.com 为 obosupport@gmail.com。
+- support@obo-ai.com 未在页面中发现。
+- 已更新并确认涉及页面：
+  - Contact Us
+  - Privacy Policy
+  - Shipping and Taxes
+  - Returns and Warranty / Refund Policy
+  - Support
+  - Business Purchasing Program
+- 所有相关页面仍保持 published。
+- 本轮 Shopify 后台页面内容修改未改 theme code。
+
+已验证：
+- /pages/contact 可打开，内容和样式正常。
+- /pages/support 可打开，邮箱已显示 obosupport@gmail.com。
+- /pages/shipping-and-taxes 可打开，英文内容已显示。
+- Footer 中核心链接可打开，不是 404。
+- 底部出现的 Shopify preview/admin bar 属于管理员预览状态，普通访客不可见，不是网站 bug。
+
+当前遗留：
+- Support 页面富文本层级仍可继续优化：部分小标题建议设置为 Heading，退换货信息建议设置为 bullet list。
+- Policy / Support / FAQ 等页面内容后续还可以继续品牌化、法务化和视觉细节优化。
+- Powered by Shopify 是否移除待决定。
+- 下一阶段建议：检查 checkout / footer / policy 页面在无痕访客视图下的最终表现。
