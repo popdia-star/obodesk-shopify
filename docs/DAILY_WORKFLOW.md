@@ -247,3 +247,14 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
   - Business & Bulk Orders 联系说明
 - 正式站 /pages/contact 已验证内容正常显示。
 - 当前仍待优化：页面视觉排版较基础，后续可统一优化 page 模板样式。
+
+## 2026-04-29 About Us / FAQ 页面检查记录
+
+- About Us 页面已检查，可正常打开。
+- About Us 页面当前有 Our Story / Our Mission / What We Offer / Our Promise 内容。
+- FAQ 页面已检查，可正常打开。
+- FAQ 页面当前包含 Shipping / Returns & Refunds / Products / Orders & Payments 等内容。
+- 两个页面都不是 404，也不是空页。
+- 当前判断：内容可用，但文案偏通用，后续可品牌化优化。
+- 更主要的问题是基础 page 模板整体排版较简陋，包括页面宽度、段落间距、标题层级和 footer 对齐。
+- 下一步建议：不要继续逐页手动补内容，改为统一优化 page 模板样式。
