@@ -1143,6 +1143,68 @@ body {
   color: #111111;
 }
 
+/** OboDesk standard page V1 */
+.obodesk-page {
+  padding-block: clamp(64px, 8vw, 112px) clamp(80px, 10vw, 136px);
+}
+
+.obodesk-page__inner {
+  width: min(calc(100% - var(--page-margin) * 2), 940px);
+  margin-inline: auto;
+}
+
+.obodesk-page__header {
+  max-width: 760px;
+  margin-block-end: clamp(32px, 5vw, 56px);
+}
+
+.obodesk-page__header h1 {
+  font-size: clamp(2.75rem, 6vw, 5.6rem);
+  line-height: 1.02;
+}
+
+.obodesk-page__content {
+  max-width: 880px;
+  color: #4f5a68;
+  font-size: 1.02rem;
+  line-height: 1.72;
+}
+
+.obodesk-page__content > * + * {
+  margin-block-start: 1.05rem;
+}
+
+.obodesk-page__content h2,
+.obodesk-page__content h3 {
+  color: #111111;
+  line-height: 1.12;
+}
+
+.obodesk-page__content h2 {
+  margin-block-start: 2.6rem;
+  font-size: clamp(1.6rem, 3vw, 2.45rem);
+}
+
+.obodesk-page__content h3 {
+  margin-block-start: 2rem;
+  font-size: clamp(1.18rem, 2vw, 1.55rem);
+}
+
+.obodesk-page__content ul,
+.obodesk-page__content ol {
+  padding-inline-start: 1.35rem;
+}
+
+.obodesk-page__content li + li {
+  margin-block-start: 0.5rem;
+}
+
+.obodesk-page__content a {
+  color: #111111;
+  font-weight: 700;
+  text-underline-offset: 0.18em;
+}
+
 @media (max-width: 1100px) {
   .obodesk-hero__inner {
     grid-template-columns: 1fr;
@@ -1332,6 +1394,18 @@ body {
 }
 
 @media (max-width: 640px) {
+  .obodesk-page {
+    padding-block: 48px 72px;
+  }
+
+  .obodesk-page__header {
+    margin-block-end: 28px;
+  }
+
+  .obodesk-page__header h1 {
+    font-size: clamp(2.2rem, 12vw, 3.2rem);
+  }
+
   .obodesk-cart__hero {
     margin-block-end: 24px;
   }
