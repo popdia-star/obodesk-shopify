@@ -1205,6 +1205,126 @@ body {
   text-underline-offset: 0.18em;
 }
 
+/** OboDesk footer V1 */
+.obodesk-site-footer {
+  width: 100%;
+  margin-block-start: clamp(40px, 6vw, 80px);
+  padding-block: clamp(40px, 6vw, 72px) 28px;
+  border-block-start: 1px solid rgba(17, 17, 17, 0.1);
+  background: #ffffff;
+  color: #111111;
+}
+
+.obodesk-site-footer__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: clamp(32px, 6vw, 96px);
+}
+
+.obodesk-site-footer__brand {
+  max-width: 620px;
+}
+
+.obodesk-site-footer__name {
+  margin-block-end: 14px;
+  color: #111111;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.obodesk-site-footer__lead {
+  max-width: 460px;
+  color: #111111;
+  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.obodesk-site-footer__brand > p:not(.obodesk-site-footer__name):not(.obodesk-site-footer__lead),
+.obodesk-site-footer__support p {
+  color: #596579;
+  line-height: 1.65;
+}
+
+.obodesk-site-footer__brand > * + * {
+  margin-block-start: 14px;
+}
+
+.obodesk-site-footer__support {
+  margin-block-start: 28px;
+  padding-block-start: 22px;
+  border-block-start: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.obodesk-site-footer__label {
+  margin-block-end: 12px;
+  color: #627084;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.obodesk-site-footer__support a,
+.obodesk-site-footer__links a {
+  color: #111111;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.obodesk-site-footer__support a {
+  display: inline-block;
+  margin-block-end: 8px;
+}
+
+.obodesk-site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+}
+
+.obodesk-site-footer__links a {
+  min-height: 32px;
+  color: #3f4854;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.obodesk-site-footer__links a:hover,
+.obodesk-site-footer__support a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.obodesk-site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-block-start: clamp(36px, 5vw, 64px);
+  padding-block-start: 24px;
+  border-block-start: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.obodesk-site-footer__bottom p {
+  color: #727b88;
+  font-size: 0.9rem;
+}
+
+.obodesk-site-footer__payment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.obodesk-site-footer__payment svg {
+  width: auto;
+  height: 24px;
+}
+
 @media (max-width: 1100px) {
   .obodesk-hero__inner {
     grid-template-columns: 1fr;
@@ -1394,6 +1514,26 @@ body {
 }
 
 @media (max-width: 640px) {
+  .obodesk-site-footer {
+    margin-block-start: 40px;
+    padding-block: 36px 24px;
+  }
+
+  .obodesk-site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .obodesk-site-footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .obodesk-site-footer__payment {
+    justify-content: flex-start;
+  }
+
   .obodesk-page {
     padding-block: 48px 72px;
   }
