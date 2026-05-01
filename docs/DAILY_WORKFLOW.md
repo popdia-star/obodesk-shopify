@@ -360,3 +360,18 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Cart and Checkout validation passed.
 - Verified the live storefront Home Featured Essentials second-card entry.
 - Today's result: Featured Essentials was upgraded from 1 real purchasable product entry to 2 real purchasable product entries.
+
+## 2026-05-01 Featured Essentials third product entry upgrade
+
+- Completed the Featured Essentials third-card real product link upgrade.
+- The PC Sync LED product was cleaned into the formal product name: `PC RGB Sync Light Strip`.
+- The product handle remains `pc-sync-rgb-monitor-light-strip`.
+- The product has been published to Online Store.
+- The product has been added to the Lighting collection.
+- Vendor was changed to `OboDesk`.
+- Product Type was set to `Lighting`.
+- The product has been configured as a physical product and added to the general shipping profile.
+- The third card, `Screen Sync Light`, now links to `/products/pc-sync-rgb-monitor-light-strip`.
+- Live storefront verification passed: product page, Add to cart, Cart, and Checkout all work.
+- Today's result: Featured Essentials was upgraded from 2 real purchasable product entries to 3 real purchasable product entries.
+- The fourth card, `Monitor Light Bar`, temporarily remains linked to `/collections/lighting` until the real product is ready.
