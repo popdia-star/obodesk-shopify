@@ -325,3 +325,21 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - 本地预览和正式站验证通过。
 - 整体符合克制、专业、系统感的 footer 气质。
 - 当前 V1 暂不升级为 Shop by System / Support / Company 三列，避免过度复杂化。
+
+## 2026-05-01 Featured Essentials read-only check
+
+- Checked the four Home Featured Essentials cards.
+- The current Featured Essentials area is a hardcoded section, not a dynamic product list.
+- The first card, `Signature Monitor Riser`, already links to the verified purchasable product:
+  - `/products/signature-monitor-riser-live`
+- `Essential Desk Mat` is currently a static placeholder card and links to the Desk Setup collection:
+  - `/collections/desk-setup`
+- `Screen Sync Light` is currently a static placeholder card and links to the Lighting collection:
+  - `/collections/lighting`
+- `Monitor Light Bar` is currently a static placeholder card and links to the Lighting collection:
+  - `/collections/lighting`
+- Current card imagery is CSS-drawn visual treatment, not Shopify product images.
+- The last three cards have not yet been confirmed as real Shopify products.
+- Do not hard-link the last three cards to product URLs until those products exist and are purchasable, to avoid 404 or non-purchasable product experiences.
+- Low-risk strategy: keep the last three cards linking to collections, then replace them with product links after real products are created.
+- Today, avoid a larger homepage structure change and keep the current overall design stable.
