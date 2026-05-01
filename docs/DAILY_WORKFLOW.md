@@ -343,3 +343,20 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Do not hard-link the last three cards to product URLs until those products exist and are purchasable, to avoid 404 or non-purchasable product experiences.
 - Low-risk strategy: keep the last three cards linking to collections, then replace them with product links after real products are created.
 - Today, avoid a larger homepage structure change and keep the current overall design stable.
+
+## 2026-05-01 Featured Essentials and Wool Felt Desk Mat checkout fix
+
+- Completed the Featured Essentials second-card real product link upgrade.
+- `Signature Monitor Riser` remains linked to `/products/signature-monitor-riser-live`.
+- `Essential Desk Mat` was updated to `Essential Wool Desk Mat`.
+- The second card link was updated to `/products/obodesk-premium-wool-felt-desk-mat`.
+- Investigated the Wool Felt Desk Mat initial Sold out / cart add failure issue.
+- Confirmed the root cause was not theme code and not inventory; the `guangdong` fulfillment location was not included in the general shipping profile delivery zones.
+- Added the `guangdong` fulfillment location to the Shopify Shipping general profile and reused the US / Canada / Europe delivery zones.
+- Did not add a China delivery zone.
+- China market is set to Draft / inactive.
+- Fixed `product.liquid` multi-variant button state handling.
+- Wool Felt Desk Mat Medium / Large / Extra Large can all be added to cart.
+- Cart and Checkout validation passed.
+- Verified the live storefront Home Featured Essentials second-card entry.
+- Today's result: Featured Essentials was upgraded from 1 real purchasable product entry to 2 real purchasable product entries.
