@@ -53,6 +53,10 @@
       <div class="obodesk-product__form">
         {% form 'product', product %}
           {% assign current_variant = product.selected_or_first_available_variant %}
+          {% assign can_add_to_cart = current_variant.available %}
+          {% if current_variant.inventory_policy == 'continue' or product.available %}
+            {% assign can_add_to_cart = true %}
+          {% endif %}
 
           {% if product.has_only_default_variant or product.variants.size == 1 %}
             <input type="hidden" name="id" value="{{ current_variant.id }}">
@@ -60,8 +64,13 @@
             <label for="ProductVariant-{{ section.id }}">Configuration</label>
             <select id="ProductVariant-{{ section.id }}" name="id">
               {% for variant in product.variants %}
+                {% assign variant_can_add_to_cart = variant.available %}
+                {% if variant.inventory_policy == 'continue' %}
+                  {% assign variant_can_add_to_cart = true %}
+                {% endif %}
                 <option
                   value="{{ variant.id }}"
+                  data-available="{{ variant_can_add_to_cart }}"
                   {% if variant == current_variant %}
                     selected="selected"
                   {% endif %}
@@ -75,12 +84,35 @@
           <label for="ProductQuantity-{{ section.id }}">Quantity</label>
           <input id="ProductQuantity-{{ section.id }}" type="number" name="quantity" min="1" value="1">
 
-          {% if current_variant.available %}
+          {% if can_add_to_cart %}
             <input type="submit" value="Add to cart">
             {{ form | payment_button }}
           {% else %}
             <input type="submit" value="Sold out" disabled>
           {% endif %}
+
+          {% unless product.has_only_default_variant or product.variants.size == 1 %}
+            <script>
+              (() => {
+                const productForm = document.currentScript.closest('form');
+                const variantSelect = productForm.querySelector('select[name="id"]');
+                const submitButton = productForm.querySelector('input[type="submit"]');
+
+                if (!variantSelect || !submitButton) return;
+
+                const updateButtonState = () => {
+                  const selectedOption = variantSelect.options[variantSelect.selectedIndex];
+                  const canAddToCart = selectedOption.dataset.available === 'true';
+
+                  submitButton.value = canAddToCart ? 'Add to cart' : 'Sold out';
+                  submitButton.disabled = !canAddToCart;
+                };
+
+                variantSelect.addEventListener('change', updateButtonState);
+                updateButtonState();
+              })();
+            </script>
+          {% endunless %}
         {% endform %}
       </div>
     </div>
