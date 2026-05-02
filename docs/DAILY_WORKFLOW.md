@@ -444,3 +444,31 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - No real bundle or kit products were created in this round.
 - Current strategy: keep Kits as a future solution entry until real sets such as `Starter Desk Kit`, `Lighting Upgrade Kit`, and `Creator Desk Kit` are created.
 - Live storefront verification passed: clicking `Kits` jumps correctly to the Home Kits section.
+
+## 2026-05-03 Main navigation strategic entry baseline closure
+
+- Completed the baseline closure for the 5 strategic main navigation entries.
+- Current main navigation remains a minimal first-level navigation:
+  - Desk Setup
+  - Lighting
+  - Power
+  - Desk Infrastructure
+  - Kits
+- Do not restore the old Mega Menu, and do not expose legacy 3C / Data Center mixed-category navigation.
+- Power collection has been filled with 2 products:
+  1. `8 Port USB C Hub`
+  2. `8-Outlet Rack Mount PDU`
+- Power collection live storefront verification passed: page opens, products are visible, products can be added to Cart, and Checkout can be entered.
+- Desk Infrastructure collection has been filled with 5 core desk system products:
+  1. `Signature Monitor Riser`
+  2. `OboDesk Premium Wool Felt Desk Mat`
+  3. `PC RGB Sync Light Strip`
+  4. `RGB Monitor Light Bar`
+  5. `8 Port USB-C Hub`
+- Desk Infrastructure live storefront verification passed: page opens, 5 products are visible, and each can enter its product page.
+- Kits collection is still empty, so `/collections/kits` is not directly exposed.
+- Header `Kits` link has been changed to `/#obodesk-kits`.
+- Clicking Header `Kits` jumps to the Home Curated Setup Kits area.
+- Current strategy: keep Kits as a future solution entry, then create real `Starter Desk Kit`, `Lighting Upgrade Kit`, and `Creator Desk Kit` products later.
+- Today's result: all main navigation entries now avoid empty-page experiences.
+- Next plan: enter the storefront product quality cleanup stage, starting with Power and Desk Infrastructure products that have overly long titles, supply-chain-looking images, or inconsistent copy.
