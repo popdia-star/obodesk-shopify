@@ -375,3 +375,24 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Live storefront verification passed: product page, Add to cart, Cart, and Checkout all work.
 - Today's result: Featured Essentials was upgraded from 2 real purchasable product entries to 3 real purchasable product entries.
 - The fourth card, `Monitor Light Bar`, temporarily remains linked to `/collections/lighting` until the real product is ready.
+
+## 2026-05-02 Featured Essentials fourth product entry upgrade
+
+- Completed the Featured Essentials fourth-card real product link upgrade.
+- RGB Monitor Light Bar product cleanup and validation are complete.
+- Product URL is `/products/rgb-monitor-light-bar`.
+- Product has been published to Online Store.
+- Product has been added to the Lighting collection.
+- Vendor is `OboDesk`.
+- Product Type is `Lighting`.
+- Both valid variants require shipping.
+- Both valid variants have been added to the general shipping profile.
+- Both valid variants have `guangdong` inventory and are `availableForSale`.
+- The fourth card, `Monitor Light Bar`, now links to `/products/rgb-monitor-light-bar`.
+- Live storefront verification passed: product page, Add to cart, Cart, and Checkout all work.
+- Today's result: all four Featured Essentials cards now complete the real purchasable product entry loop.
+- Current four entries:
+  1. `Signature Monitor Riser` -> `/products/signature-monitor-riser-live`
+  2. `Essential Wool Desk Mat` -> `/products/obodesk-premium-wool-felt-desk-mat`
+  3. `Screen Sync Light` -> `/products/pc-sync-rgb-monitor-light-strip`
+  4. `Monitor Light Bar` -> `/products/rgb-monitor-light-bar`
