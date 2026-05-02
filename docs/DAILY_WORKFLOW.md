@@ -433,3 +433,14 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
   - Desk Infrastructure has products.
   - Kits is still pending.
 - Next plan: plan the Kits collection to avoid an empty entry, while gradually cleaning Power and Desk Infrastructure product titles, images, and descriptions.
+
+## 2026-05-03 Kits navigation temporary optimization
+
+- Completed the temporary Kits navigation entry optimization.
+- Kits collection currently exists but has 0 products, so `/collections/kits` is not directly exposed as an empty collection page for now.
+- Header `Kits` link was changed from the collection URL to `/#obodesk-kits`.
+- Clicking Header `Kits` now jumps to the Home Curated Setup Kits area.
+- Hero `View setup kits` and Header `Kits` currently point to the same Home solution area.
+- No real bundle or kit products were created in this round.
+- Current strategy: keep Kits as a future solution entry until real sets such as `Starter Desk Kit`, `Lighting Upgrade Kit`, and `Creator Desk Kit` are created.
+- Live storefront verification passed: clicking `Kits` jumps correctly to the Home Kits section.
