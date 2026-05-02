@@ -396,3 +396,40 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
   2. `Essential Wool Desk Mat` -> `/products/obodesk-premium-wool-felt-desk-mat`
   3. `Screen Sync Light` -> `/products/pc-sync-rgb-monitor-light-strip`
   4. `Monitor Light Bar` -> `/products/rgb-monitor-light-bar`
+
+## 2026-05-02 Power collection initial fill
+
+- Completed the initial Power collection fill.
+- Power collection URL is `/collections/power`.
+- Added `8 Port USB C Hub` to the Power collection.
+- Added `8-Outlet Rack Mount PDU` to the Power collection.
+- Both products are `ACTIVE`.
+- Both products have been published to Online Store.
+- Power collection currently has 2 products, so the storefront collection is no longer empty.
+- Live storefront verification passed: Power collection page opens and both products are visible.
+- Tested that USB-C Hub and PDU can be added to Cart.
+- Checkout can be entered.
+- No theme code was modified in this round.
+- Follow-up optimization: Power product titles, images, descriptions, PDU B2B/Pro expression, and storefront display order.
+
+## 2026-05-03 Desk Infrastructure collection initial fill
+
+- Completed the initial Desk Infrastructure collection fill.
+- Desk Infrastructure collection URL is `/collections/desk-infrastructure`.
+- Added 5 core desk system products:
+  1. `Signature Monitor Riser`
+  2. `OboDesk Premium Wool Felt Desk Mat`
+  3. `PC RGB Sync Light Strip`
+  4. `RGB Monitor Light Bar`
+  5. `8 Port USB-C Hub`
+- Did not add PDU, Fiber, SFP, Thermal, ESD, Cat6, Arduino, phone case, screen protector, or other PRO/Data Center or legacy 3C products.
+- Current Desk Infrastructure positioning: OboDesk professional desk system collection across Structure / Surface / Lighting / Connectivity.
+- Live storefront verification passed: `/collections/desk-infrastructure` opens correctly, 5 products are visible, and each can enter its product page.
+- This round only changed Shopify admin collection membership; no theme code was modified.
+- Current main navigation status:
+  - Desk Setup has products.
+  - Lighting has products.
+  - Power has products.
+  - Desk Infrastructure has products.
+  - Kits is still pending.
+- Next plan: plan the Kits collection to avoid an empty entry, while gradually cleaning Power and Desk Infrastructure product titles, images, and descriptions.
