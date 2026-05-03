@@ -592,3 +592,39 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Add to cart and Checkout verification passed.
 - No theme code was modified in this round.
 - Follow-up optimization: handle can be cleaned from `signature-monitor-riser-live` to `signature-monitor-riser`, but redirects must be handled separately; product images need 4-6 high-quality additions; SEO title/description can enter the second optimization round.
+
+## 2026-05-03 Sprint 1 closing summary
+
+- Sprint 1 has been cleanly closed.
+- Current stage has moved from page buildout and entry repair to storefront product quality cleanup.
+- Completed the baseline closure for 5 main navigation entries:
+  - Desk Setup
+  - Lighting
+  - Power
+  - Desk Infrastructure
+  - Kits
+- All 4 Featured Essentials core products now complete the real product entry loop:
+  1. `Signature Monitor Riser`
+  2. `Premium Wool Felt Desk Mat`
+  3. `PC RGB Sync Light Strip`
+  4. `RGB Monitor Light Bar`
+- Completed the first-round refinement for 5 high-exposure storefront products:
+  1. `Signature Monitor Riser`
+  2. `Premium Wool Felt Desk Mat`
+  3. `PC RGB Sync Light Strip`
+  4. `RGB Monitor Light Bar`
+  5. `OboDesk 8-in-1 USB-C Hub`
+- Fixed the product page Compare-at price display logic.
+- Verified core product Add to cart / Cart / Checkout flows.
+- Clarified the new storefront collection strategy: actively maintain Desk Setup / Lighting / Power / Desk Infrastructure / Kits as the core line.
+- Legacy collections such as All Workspace Essentials and Desk & Workspace Setup are not actively maintained as the new main storefront line.
+- Confirmed that legacy 3C products, phone cases, screen protectors, Chinese titles, abnormal inventory products, and Data Center / PRO products should not be mixed into the main storefront for now.
+- Confirmed separate follow-up tasks:
+  1. Signature Monitor Riser handle cleanup
+  2. Signature Monitor Riser image additions
+  3. Product image alt text
+  4. SKU cleanup
+  5. SEO title / description
+  6. Dynamic price sync when switching variants
+  7. Real Kits bundle product planning
+- Next stage, Sprint 2: second-batch product cleanup and collection depth improvement.
