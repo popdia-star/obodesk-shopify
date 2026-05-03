@@ -511,3 +511,22 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - USB-C Hub currently displays `$39.99` as the strikethrough price and `$29.99` as the current price.
 - Did not modify Add to cart, payment button, variant select, CSS, collection, cart, header, or footer.
 - This fix supports promotional price display for all future products that have Compare-at price configured.
+
+## 2026-05-03 Storefront product quality cleanup started
+
+- Entered the storefront product quality cleanup stage.
+- Completed the first product cleanup: `OboDesk 8-in-1 USB-C Hub`.
+- USB-C Hub title, price, description, variant name, and collection membership have been cleaned.
+- USB-C Hub current price is `$29.99`, with Compare-at price set to `$39.99`.
+- Fixed the product page Compare-at price display logic.
+- Only changed `theme/obodesk-theme/sections/product.liquid`.
+- Product pages now support strikethrough Compare-at price display when `compare_at_price > price`.
+- Verified that the USB-C Hub product page displays `$39.99` as the strikethrough price and `$29.99` as the current price.
+- Completed the second product cleanup: `RGB Monitor Light Bar`.
+- RGB Monitor Light Bar title remains concise and unchanged.
+- Cleaned the variant names.
+- Rewrote the English branded product description.
+- Added RGB Monitor Light Bar to the Lighting collection and kept it in Desk Infrastructure.
+- Price and Compare-at price remain unchanged.
+- Verified that the RGB Monitor Light Bar product page, variants, Add to cart, and Checkout work correctly.
+- Follow-up optimization: dynamic price sync when switching variants can be handled as a separate task; image alt text, SKU, and SEO can enter the second product optimization round.
