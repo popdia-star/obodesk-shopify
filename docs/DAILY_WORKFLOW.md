@@ -530,3 +530,26 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Price and Compare-at price remain unchanged.
 - Verified that the RGB Monitor Light Bar product page, variants, Add to cart, and Checkout work correctly.
 - Follow-up optimization: dynamic price sync when switching variants can be handled as a separate task; image alt text, SKU, and SEO can enter the second product optimization round.
+
+## 2026-05-03 PC RGB Sync Light Strip storefront cleanup
+
+- Completed the third high-exposure storefront product cleanup: `PC RGB Sync Light Strip`.
+- Product title remains unchanged: `PC RGB Sync Light Strip`.
+- Handle remains unchanged: `pc-sync-rgb-monitor-light-strip`.
+- Cleaned 4 variant names:
+  1. `24" Monitor — 95cm`
+  2. `27" Monitor — 1.1m`
+  3. `32"–34" Monitor — 1.3m`
+  4. `42" Monitor — 2m`
+- Updated price and Compare-at price:
+  1. `$24.99` / `$34.99`
+  2. `$27.99` / `$37.99`
+  3. `$31.99` / `$42.99`
+  4. `$35.99` / `$47.99`
+- Rewrote the English branded product description.
+- Removed Chinese text, wholesale carton specs, `usemap`, `offer-template-0`, and supplier HTML remnants from the description.
+- Added the product to the Lighting collection.
+- Kept the product in the Desk Infrastructure collection.
+- Product remains `ACTIVE` and published to Online Store.
+- No theme code was modified in this round.
+- Follow-up optimization: Chinese SKU text, image alt text, SEO title/description, and image order can enter the second product optimization round.
