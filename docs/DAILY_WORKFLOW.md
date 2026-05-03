@@ -553,3 +553,23 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Product remains `ACTIVE` and published to Online Store.
 - No theme code was modified in this round.
 - Follow-up optimization: Chinese SKU text, image alt text, SEO title/description, and image order can enter the second product optimization round.
+
+## 2026-05-03 Premium Wool Felt Desk Mat storefront cleanup
+
+- Completed the fourth high-exposure storefront product cleanup: `Premium Wool Felt Desk Mat`.
+- Product title was optimized from `OboDesk Premium Wool Felt Desk Mat - Dark Grey` to `Premium Wool Felt Desk Mat`.
+- Handle remains unchanged: `obodesk-premium-wool-felt-desk-mat`.
+- Variant names remain unchanged:
+  1. `Medium (80cm x 40cm)`
+  2. `Large (90cm x 45cm)`
+  3. `Extra Large (100cm x 50cm)`
+- Updated price and Compare-at price:
+  1. Medium: `$34.99` / `$44.99`
+  2. Large: `$39.99` / `$49.99`
+  3. Extra Large: `$44.99` / `$54.99`
+- Rewrote and strengthened the English branded product description.
+- Description now includes Variant Guide and Support information.
+- Kept the product in core collections including All Workspace Essentials, Desk & Workspace Setup, and Desk Infrastructure.
+- Product remains `ACTIVE` and published to Online Store.
+- No theme code was modified in this round.
+- Follow-up optimization: image copyright/source confirmation, image alt text, and SEO title/description can enter the second product optimization round.
