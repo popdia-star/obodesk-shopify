@@ -92,6 +92,26 @@
           {% if can_add_to_cart %}
             <input type="submit" value="Add to cart">
             {{ form | payment_button }}
+            {% unless product.selling_plan_groups.size > 0 %}
+              <script>
+                (() => {
+                  const productForm = document.currentScript.closest('form');
+                  if (!productForm) return;
+
+                  const removeSubscriptionConsent = () => {
+                    productForm
+                      .querySelectorAll('#shopify-buyer-consent, [data-consent-type="subscription"]')
+                      .forEach((element) => element.remove());
+                  };
+
+                  removeSubscriptionConsent();
+                  new MutationObserver(removeSubscriptionConsent).observe(productForm, {
+                    childList: true,
+                    subtree: true,
+                  });
+                })();
+              </script>
+            {% endunless %}
           {% else %}
             <input type="submit" value="Sold out" disabled>
           {% endif %}
