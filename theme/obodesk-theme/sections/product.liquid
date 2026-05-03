@@ -41,7 +41,13 @@
       <div class="obodesk-product__summary">
         <p class="obodesk-eyebrow">OboDesk Essential</p>
         <h1>{{ product.title }}</h1>
-        <p class="obodesk-product__price">{{ product.price | money }}</p>
+        {% assign current_variant = product.selected_or_first_available_variant %}
+        <p class="obodesk-product__price">
+          {% if current_variant.compare_at_price > current_variant.price %}
+            <s>{{ current_variant.compare_at_price | money }}</s>
+          {% endif %}
+          <span>{{ current_variant.price | money }}</span>
+        </p>
 
         {% if product.description != blank %}
           <div class="obodesk-product__description">
@@ -52,7 +58,6 @@
 
       <div class="obodesk-product__form">
         {% form 'product', product %}
-          {% assign current_variant = product.selected_or_first_available_variant %}
           {% assign can_add_to_cart = current_variant.available %}
           {% if current_variant.inventory_policy == 'continue' or product.available %}
             {% assign can_add_to_cart = true %}
