@@ -499,3 +499,15 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Clicking Header `Kits` jumps to the Home Curated Setup Kits area.
 - Today's result: all main navigation entries now avoid empty-page experiences.
 - Next stage: enter the storefront product quality cleanup stage, starting with Power and Desk Infrastructure products that have overly long titles, supply-chain-looking images, or inconsistent copy.
+
+## 2026-05-03 Product page Compare-at price display fix
+
+- Completed the product page Compare-at price display fix.
+- Only changed `theme/obodesk-theme/sections/product.liquid`.
+- The original product page only displayed `product.price` and did not display `compare_at_price`.
+- The price display now uses `selected_or_first_available_variant`.
+- When `compare_at_price > price`, the product page displays the Compare-at price as a strikethrough.
+- When there is no Compare-at price, the product page only displays the current price.
+- USB-C Hub currently displays `$39.99` as the strikethrough price and `$29.99` as the current price.
+- Did not modify Add to cart, payment button, variant select, CSS, collection, cart, header, or footer.
+- This fix supports promotional price display for all future products that have Compare-at price configured.
