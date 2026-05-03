@@ -628,3 +628,32 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
   6. Dynamic price sync when switching variants
   7. Real Kits bundle product planning
 - Next stage, Sprint 2: second-batch product cleanup and collection depth improvement.
+
+## 2026-05-03 Sprint 2.2 Desk Infrastructure collection copy completion
+
+- Sprint 2.2 has been completed.
+- Updated the Desk Infrastructure collection description in Shopify Admin.
+- New collection description:
+  "The structural layer of the OboDesk system: monitor elevation, surface control, lighting, and connectivity essentials selected to create a cleaner, more capable workstation."
+- Verified the live collection page:
+  - `https://obodesk.com/collections/desk-infrastructure`
+- Collection title remains `Desk Infrastructure`.
+- Products remain visible.
+- Page layout looks normal.
+- No theme code changes were required.
+
+## 2026-05-03 Sprint 2.3 Currency and Shopify Markets QA completion
+
+- Sprint 2.3 has been completed.
+- Completed Currency / Shopify Markets QA and fallback market cleanup.
+- Confirmed store currency remains USD.
+- Confirmed US / Canada market remains active.
+- Confirmed UK market remains active.
+- Confirmed EU market remains active.
+- Confirmed the currency issue was caused by Shopify Markets / localization settings, not theme price rendering.
+- Updated Backup Region from Austria (`AT`) to United States (`US`).
+- Expected behavior after the fix:
+  - US and unmatched fallback visitors see USD.
+  - EU visitors may still see EUR / local currency.
+  - UK visitors see GBP.
+- No theme code changes were required.
