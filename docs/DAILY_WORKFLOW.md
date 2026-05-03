@@ -573,3 +573,22 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 - Product remains `ACTIVE` and published to Online Store.
 - No theme code was modified in this round.
 - Follow-up optimization: image copyright/source confirmation, image alt text, and SEO title/description can enter the second product optimization round.
+
+## 2026-05-03 Signature Monitor Riser storefront cleanup
+
+- Completed the fifth high-exposure storefront product cleanup: `Signature Monitor Riser`.
+- Product title remains unchanged: `Signature Monitor Riser`.
+- Handle temporarily remains unchanged: `signature-monitor-riser-live`.
+- Vendor has been standardized to `OboDesk`.
+- Product Type has been set to `Monitor Riser`.
+- SKU has been set to `OBODESK-RISER-SIG`.
+- Price remains `$89.00`.
+- Compare-at price has been set to `$109.00`.
+- Rewrote the English branded product description, including Why It Belongs on Your Desk / Designed for Modern Workstations / Setup Ideas / Specifications / Support.
+- Added tags: `desk-setup`, `monitor-riser`, `desk-infrastructure`, `workspace`, `productivity`, `structure-layer`.
+- Added or confirmed core collections: Desk Infrastructure, All Workspace Essentials, and Desk & Workspace Setup.
+- Product remains `ACTIVE` and published to Online Store.
+- `availableForSale` remains `true`.
+- Add to cart and Checkout verification passed.
+- No theme code was modified in this round.
+- Follow-up optimization: handle can be cleaned from `signature-monitor-riser-live` to `signature-monitor-riser`, but redirects must be handled separately; product images need 4-6 high-quality additions; SEO title/description can enter the second optimization round.
