@@ -1368,12 +1368,24 @@ body {
   }
 
   .obodesk-hero__inner {
-    gap: 28px;
-    padding-block: 44px 48px;
+    gap: 20px;
+    padding-block: 28px 38px;
   }
 
   .obodesk-hero__content {
     max-width: 28rem;
+  }
+
+  .obodesk-hero h1 {
+    font-size: clamp(2.2rem, 12.5vw, 3rem);
+  }
+
+  .obodesk-hero .obodesk-lede {
+    margin-block-start: 12px;
+  }
+
+  .obodesk-hero .obodesk-actions {
+    margin-block-start: 16px;
   }
 
   .obodesk-card,

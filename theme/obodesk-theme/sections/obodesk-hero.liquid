@@ -10,7 +10,11 @@
       </div>
     </div>
 
-    <figure class="obodesk-hero__media">
+    <picture class="obodesk-hero__media">
+      <source
+        media="(max-width: 749px)"
+        srcset="{{ 'obodesk-hero-mobile-0506.jpg' | asset_url }}"
+      >
       <img
         class="obodesk-hero__image"
         src="{{ 'obodesk-hero-workspace-050605.jpg' | asset_url }}"
@@ -20,7 +24,7 @@
         loading="eager"
         fetchpriority="high"
       >
-    </figure>
+    </picture>
   </div>
 </section>
 
