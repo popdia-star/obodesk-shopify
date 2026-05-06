@@ -2,24 +2,25 @@
   <div class="obodesk-container obodesk-hero__inner">
     <div class="obodesk-hero__content">
       <p class="obodesk-eyebrow">OboDesk</p>
-      <h1>Build Your Desk Environment.</h1>
+      <h1>Build Your<br>Desk<br>Environment.</h1>
       <p class="obodesk-lede">Premium desk essentials designed for focus, flow, and visual atmosphere.</p>
       <div class="obodesk-actions">
-        <a class="obodesk-button obodesk-button--primary" href="{{ collections['desk-setup'].url | default: routes.root_url }}">Explore essentials</a>
-        <a class="obodesk-button obodesk-button--secondary" href="#obodesk-kits">View setup kits</a>
+        <a class="obodesk-button obodesk-button--primary" href="{{ routes.collections_url }}/desk-setup">Shop the System</a>
+        <a class="obodesk-button obodesk-button--secondary" href="{{ routes.collections_url }}/desk-infrastructure">Explore Desk Infrastructure</a>
       </div>
     </div>
 
-    <div class="obodesk-hero__panel" aria-label="Premium desk environment scene">
-      <div class="obodesk-hero__ambient"></div>
-      <div class="obodesk-hero__screen"></div>
-      <div class="obodesk-hero__stand"></div>
-      <div class="obodesk-hero__surface"></div>
-      <div class="obodesk-hero__mat"></div>
-      <div class="obodesk-hero__keyboard"></div>
-      <div class="obodesk-hero__dock"></div>
-      <div class="obodesk-hero__lightbar"></div>
-    </div>
+    <figure class="obodesk-hero__media">
+      <img
+        class="obodesk-hero__image"
+        src="{{ 'obodesk-hero-workspace-050605.jpg' | asset_url }}"
+        alt="OboDesk desktop system with monitor, light bar, desk riser, keyboard, mouse, desk mat, and warm workspace lighting"
+        width="3172"
+        height="1321"
+        loading="eager"
+        fetchpriority="high"
+      >
+    </figure>
   </div>
 </section>
 
