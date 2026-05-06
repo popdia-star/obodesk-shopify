@@ -221,15 +221,15 @@ body {
 .obodesk-hero__media {
   position: relative;
   z-index: 0;
-  display: grid;
+  display: block;
   width: min(140%, 1145px);
   aspect-ratio: 2.05 / 1;
   min-width: 0;
   margin: 0 -4vw 0 0;
-  place-items: center;
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 30px 78px rgba(35, 23, 15, 0.22), 0 2px 0 rgba(255, 255, 255, 0.5) inset;
+  line-height: 0;
 }
 
 .obodesk-hero__media::before {
@@ -244,6 +244,7 @@ body {
 
 .obodesk-hero__image {
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
   max-width: none;
