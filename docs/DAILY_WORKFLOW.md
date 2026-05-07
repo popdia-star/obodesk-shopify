@@ -657,3 +657,61 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
   - EU visitors may still see EUR / local currency.
   - UK visitors see GBP.
 - No theme code changes were required.
+
+## 2026-05-06 OboDesk Homepage Hero 双端优化与 Product Center v1.0 准备
+
+### 一、Homepage Hero 完成事项
+
+1. Desktop Hero 已替换为新版 OboDesk 桌面系统图：
+   - `theme/obodesk-theme/assets/obodesk-hero-workspace-050605.jpg`
+2. Mobile Hero 已新增专用图：
+   - `theme/obodesk-theme/assets/obodesk-hero-mobile-0506.jpg`
+3. Hero section 已支持 desktop / mobile 图片切换：
+   - Desktop 使用 `obodesk-hero-workspace-050605.jpg`
+   - Mobile 使用 `obodesk-hero-mobile-0506.jpg`
+4. 修复 desktop Hero 图片容器未填满圆角卡片问题。
+   - 修改文件：`theme/obodesk-theme/assets/critical.css`
+5. 保持标题、副标题、CTA、导航、产品、collection、footer 不变。
+
+### 二、验证结果
+
+1. `shopify theme check` 通过：
+   - `45 files inspected with no offenses found`
+2. Shopify Live Theme 推送成功：
+   - Theme：`OboDesk V1 Local Build`
+   - Theme ID：`153947996300`
+3. 线上验证：
+   - Desktop Hero 显示正常
+   - Mobile Hero 显示正常
+   - CTA 跳转正常
+
+### 三、Git 提交记录
+
+1. `aa40663` `update homepage hero image and layout`
+2. `0e91b5f` `add mobile hero image`
+3. `2e90657` `fix hero image container fill`
+
+### 四、GitHub 合并记录
+
+1. 分支：`sprint-2-homepage-optimization`
+2. PR：`#1 Sprint 2 homepage optimization`
+3. 已合并到 `master`
+4. 本地 `master` 已同步
+5. `git status` clean
+
+### 五、Product Center 进展
+
+1. 已检查 `OboDesk_Product_Center_v1_Template_PlanA(1).xlsx`
+2. `Products_SPU`、`SKU_Variants`、`Product_Images` 字段结构基本通过
+3. Shopify 同步字段已具备 v1.0 基础
+4. 下一步只处理 5 个 Live Core MVP 产品的 Shopify 同步数据写入和校验
+
+### 六、今日下一步
+
+继续 Product Center v1.0：
+
+1. 只处理 5 个 Live Core MVP 产品
+2. 写入 / 校验 `Shopify_Product_ID`
+3. 写入 / 校验 `Shopify_Variant_ID`
+4. 写入 / 校验 `Shopify_Price`、`Inventory`、`Published`
+5. 不处理旧产品、不处理 PRO、不处理 Legacy、不处理 SEO
