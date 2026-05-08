@@ -715,3 +715,116 @@ Product 页面已完成可售状态体验优化：`product.liquid` 增加 `curre
 3. 写入 / 校验 `Shopify_Variant_ID`
 4. 写入 / 校验 `Shopify_Price`、`Inventory`、`Published`
 5. 不处理旧产品、不处理 PRO、不处理 Legacy、不处理 SEO
+
+## 2026-05-07 Product Center v1.0 收尾记录
+
+### 一、今日完成事项
+
+1. Product Center v1.0 正式表已在飞书中显示正常。
+   当前正式数据规模：
+   - Products_SPU：7 个产品
+   - SKU_Variants：13 个 Variant
+   - Product_Images：7 条主图记录
+
+2. 已完成 MVP5 Baseline 数据：
+   - 5 个产品
+   - 7 个 Variant
+   - 5 条主图记录
+
+3. 已完成 CoreBatch2 Lighting 数据：
+   - 2 个 Lighting 产品
+   - 6 个 Variant
+   - 2 条主图记录
+
+4. 已完成 CoreBatch2 本地文件生成与修复：
+   - 修复 6 个 Variant 的 Shopify_Inventory_Qty
+   - Shopify_Inventory_Qty 全部为 50
+   - 校验通过
+   - 飞书导入准备状态 PASS
+
+5. 已完成 Product Center v1.0 本地正式表合并。
+   输出文件：
+   - `OboDesk_Product_Center_v1_Merged_20260507.xlsx`
+   - `Products_SPU_v1_Merged_20260507.csv`
+   - `SKU_Variants_v1_Merged_20260507.csv`
+   - `Product_Images_v1_Merged_20260507.csv`
+   - `Product_Center_v1_Merge_Report_20260507.md`
+
+   合并结果：
+   - Products_SPU：5 + 2 = 7，PASS
+   - SKU_Variants：7 + 6 = 13，PASS
+   - Product_Images：5 + 2 = 7，PASS
+   - 重复 Shopify_Product_ID：无
+   - 重复 Shopify_Variant_ID：无
+   - 重复 SKU_ID：无
+   - 空价格：无
+   - 空库存：无
+
+6. 已确认正式表在飞书中显示正常。
+
+7. 已新增 Product Center v1.0 SOP 文档：
+   - `docs/PRODUCT_CENTER_V1_SOP.md`
+
+8. 已更新日常工作日志：
+   - `docs/DAILY_WORKFLOW.md`
+
+9. 已完成 Git 提交并推送 GitHub：
+   - commit hash：`448a570`
+   - commit message：`document product center v1 sop`
+   - branch：`master`
+   - remote：`origin/master`
+
+### 二、今日关键结论
+
+Product Center v1.0 已经从模板阶段进入运营化阶段。
+
+当前系统定位：
+- Shopify 是真实销售数据源
+- 飞书是标准化产品资产中枢
+- Codex 负责本地清洗、校验、合并文件
+- 人工负责最终检查和导入飞书
+- 暂不使用飞书 API 直接写正式表
+
+### 三、下一步计划
+
+下一阶段暂不扩展第三批产品，先做运营化配置：
+
+1. 在飞书中创建 Import_Log 表。
+2. 录入两条历史导入记录：
+   - `IMP-20260507-MVP5`
+   - `IMP-20260507-BATCH2-LIGHTING`
+
+3. 建立基础 QA 视图。
+   Products_SPU：
+   - Live Core MVP
+   - Missing Shopify ID
+   - Missing Image
+
+   SKU_Variants：
+   - Missing Variant ID
+   - Missing Price
+   - Missing Inventory
+
+4. 后续再处理：
+   - Chinese Shopify SKU 视图
+   - Empty Shopify Real SKU 视图
+   - Needs SEO 视图
+   - SKU 标准化修复清单
+   - 第三批产品筛选
+
+### 四、今日收尾状态
+
+Product Center v1.0 已完成正式表搭建、第二批合并、飞书显示验证、SOP 固化、GitHub 保存。
+
+## 2026-05-08 Product Center v1.0 setup phase closure
+
+- Product Center v1.0 is now treated as the official OboDesk product data hub.
+- Shopify remains the source of truth for real product data, including Product IDs, Variant IDs, handles, image URLs, prices, inventory, and publication status.
+- Feishu Product Center is used as the standardized product asset hub and long-term product master table.
+- The daily workflow is now Shopify-first: create or import products in Shopify, export Shopify data, validate the data, then import clean records into Feishu for structured management.
+- Third-batch product expansion is paused until the daily workflow is stable.
+- Added `docs/PRODUCT_CENTER_V1_LOG.md` to record the v1.0 closure status and operating boundary.
+- Added `docs/DAILY_PRODUCT_LAUNCH_SOP.md` to document the daily product launch workflow, validation fields, lifecycle status, and automation direction.
+- No Shopify theme files were changed.
+- No product data was modified.
+- No Feishu API calls were made.
