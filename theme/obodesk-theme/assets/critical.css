@@ -1360,10 +1360,12 @@ body {
   }
 
   .obodesk-actions {
+    flex-direction: column;
     margin-block-start: 24px;
   }
 
   .obodesk-button {
+    width: 100%;
     min-height: 44px;
     padding-inline: 16px;
   }
