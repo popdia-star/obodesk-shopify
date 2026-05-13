@@ -4,23 +4,25 @@
       <p class="obodesk-site-footer__name">OboDesk</p>
       <p class="obodesk-site-footer__lead">Workspace solutions designed for the AI era professional.</p>
       <p>
-        Build a cleaner, more intentional desk environment — from structure and lighting to power, cable flow, and daily
+        Build a cleaner, more intentional desk environment from structure and lighting to power, cable flow, and daily
         work rhythm.
       </p>
 
       <div class="obodesk-site-footer__support">
         <p class="obodesk-site-footer__label">Customer Support</p>
         <a href="mailto:obosupport@gmail.com">obosupport@gmail.com</a>
-        <p>Usually replies within 1–2 business days.</p>
+        <p>Usually replies within 1-2 business days.</p>
       </div>
     </div>
 
     <nav class="obodesk-site-footer__nav" aria-label="Footer navigation">
       <p class="obodesk-site-footer__label">Navigation</p>
       <div class="obodesk-site-footer__links">
-        {% for link in section.settings.menu.links %}
-          {{ link.title | link_to: link.url }}
-        {% endfor %}
+        <a href="/pages/refund-policy">Refund Policy</a>
+        <a href="/pages/shipping-and-taxes">Shipping &amp; Taxes</a>
+        <a href="/pages/contact">Contact</a>
+        <a href="/pages/privacy-policy">Privacy Policy</a>
+        <a href="/policies/terms-of-service">Terms of Service</a>
       </div>
     </nav>
   </div>
@@ -42,11 +44,6 @@
 {
   "name": "t:general.footer",
   "settings": [
-    {
-      "type": "link_list",
-      "id": "menu",
-      "label": "t:labels.menu"
-    },
     {
       "type": "checkbox",
       "id": "show_payment_icons",
