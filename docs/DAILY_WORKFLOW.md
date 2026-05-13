@@ -828,3 +828,21 @@ Product Center v1.0 已完成正式表搭建、第二批合并、飞书显示验
 - No Shopify theme files were changed.
 - No product data was modified.
 - No Feishu API calls were made.
+
+## 2026-05-13 AI Shopping Readiness v0.1 data modeling
+
+- Completed the PDP theme structure diagnosis for AI-friendly product detail page readiness.
+- Confirmed that the current `sections/product.liquid` purchase flow is stable.
+- Confirmed that the current phase should not modify the product form, variant selector, Add to Cart, Buy it now, cart, or checkout-related code.
+- Designed the AI Shopping Readiness P0 field system for Product Center-first PDP content preparation.
+- Added `docs/AI_SHOPPING_READINESS_FIELDS_V1.md` to define the P0 field purpose, filling rules, Product Center field guidance, and future Shopify metafield mapping.
+- Added `data/obodesk_ai_pdp_p0_template.csv` with first-pass Draft AI PDP content for 5 MVP products.
+- Added `data/obodesk_mvp_product_fact_checklist.csv` for manual verification of true product facts before Product Center import or Shopify metafield planning.
+- The 5 MVP products' AI PDP content remains Draft and must not be imported into Product Center, synced to Shopify metafields, or shown on the storefront yet.
+- All true product parameters still require manual verification.
+- Next step: complete the fact checklist using Shopify Admin, 1688 source products, supplier sheets, physical samples, product images, and packaging information.
+- No Shopify theme files were changed.
+- No Shopify API calls were made.
+- No Shopify metafields were created.
+- No Shopify push was performed.
+- No Git commit was made.
