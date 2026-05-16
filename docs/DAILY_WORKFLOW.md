@@ -846,3 +846,104 @@ Product Center v1.0 已完成正式表搭建、第二批合并、飞书显示验
 - No Shopify metafields were created.
 - No Shopify push was performed.
 - No Git commit was made.
+
+## 2026-05-14 AI Shopping Readiness v0.1 product fact verification
+
+- Generated and updated `data/obodesk_mvp_product_fact_verification_today.csv` as the current product fact verification worksheet.
+- Added `docs/OBODESK_PRODUCT_FACT_VERIFICATION_FIELD_GUIDE.md` to document the bilingual verification fields, source rules, and no-guessing boundaries.
+- Shopify Assistant completed read-only Shopify Admin verification for the 5 MVP products.
+- Shopify-confirmed backend fields were written into the CSV worksheet, including handles, product IDs, variant IDs, SKUs, product types, vendors, prices, inventory settings, publication status, tags, collections, and main image URLs.
+- Completed `Signature Monitor Riser` sample row v0.1:
+  - Live sellable size confirmed: `1000 x 260 x 122 mm`.
+  - Live sellable color confirmed: `Walnut Brown`.
+  - Health and medical risky claims were removed.
+  - `Verification_Status` is now `Partially Verified`.
+  - `Confidence_Level` is now `Medium`.
+  - Remaining manual fields: material evidence, load capacity, package contents evidence, and source screenshot archive.
+- Fixed the CSV column alignment issue and confirmed the worksheet has 41 header columns and 41 columns for each of the 5 product rows.
+- No Shopify theme files were changed.
+- No Shopify data was modified.
+- No Shopify metafields were created.
+- No Product Center import was performed.
+- No Git commit was made.
+
+Next recommended step:
+
+- Continue manual verification with `Premium Wool Felt Desk Mat`.
+- Use the `Signature Monitor Riser` sample row as the operating pattern for supplier-backed facts.
+- Keep the current boundary: do not guess product parameters, do not import Product Center data, and do not create Shopify metafields until fact verification is complete.
+
+### Hui OS Note / 今日认知沉淀
+
+Theme: OboDesk AI Shopping Readiness v0.1 — Product Fact Verification sample row setup.
+
+Completed today:
+
+1. Created / updated `data/obodesk_mvp_product_fact_verification_today.csv`.
+2. Created `docs/OBODESK_PRODUCT_FACT_VERIFICATION_FIELD_GUIDE.md`.
+3. Shopify Assistant completed read-only verification for 5 MVP product backend fields.
+4. Codex wrote verified Shopify backend fields into the CSV working draft.
+5. `Signature Monitor Riser` became sample row v0.1.
+6. Confirmed live sellable size: `1000 × 260 × 122 mm`.
+7. Confirmed live sellable color: `Walnut Brown`.
+8. Removed health / medical risky claims such as neck protection and cervical relief.
+9. Fixed CSV column misalignment using Python `csv` module.
+10. Verified CSV structure: header = 41 columns, all 5 product rows = 41 columns.
+11. No theme changes.
+12. No Shopify changes.
+13. No metafields created.
+14. No Product Center import.
+15. No Git commit.
+
+Hui OS learnings:
+
+1. AI Shopping readiness should be built on verified product facts, not AI-generated assumptions.
+2. Shopify backend fields can be marked Verified when confirmed through Shopify Assistant read-only check.
+3. Material, dimensions, load capacity, package contents, compatibility, and technical specs must come from supplier pages, 1688 links, supplier images, packaging, or physical product evidence.
+4. Do not allow AI to invent product parameters.
+5. Build one clean sample row first before scaling to all products.
+6. For OboDesk, the correct workflow is: Shopify backend verification -> CSV working draft -> manual supplier fact verification -> risk wording cleanup -> Product Center / metafields only after facts are verified.
+7. Core principle: verify first, structure second, automate third.
+
+Next step:
+
+- Continue manual supplier fact verification starting with `Premium Wool Felt Desk Mat`, using `Signature Monitor Riser` sample row v0.1 as the template.
+
+## 2026-05-17 Hui OS v0.1 decision hypothesis loop
+
+- Added `docs/decision_hypothesis_loop.md` as a Hui OS v0.1 method note.
+- Recorded the method: `决策 -> 假设 -> 行动 -> 结果 -> 复盘 -> 认知修正`.
+- Added the fixed `【决策假设闭环记录模板】`.
+- Updated the working rule for long-feedback entrepreneurship tasks.
+- No Hui OS module skeleton was changed.
+- No Shopify theme files were changed.
+- No product data was modified.
+- No Shopify or Feishu API calls were made.
+
+### Hui OS Note / 今日认知沉淀
+
+Theme: 决策假设闭环记录法 / 与未来的自己对话.
+
+Core learning:
+
+1. 创业成长不是靠每天做很多事，而是靠持续校准自己的判断力。
+2. 每一个重要决策都应该被记录成一个可验证的假设。
+3. 记录的目的不是给别人看，也不是像大公司日报一样糊弄老板，而是写给未来的自己看。
+4. 自己给自己写日报和复盘，本质上是自己是自己的老板，要对今天是否有收获负责。
+5. 未来某一天回看今天的判断，可以检查当时的认知漏洞，从而获得真正的进步。
+6. 这套方法特别适合 OboDesk、Product Center、Shopify 独立站、TikTok 内容、选品、品牌定位、自动化系统建设等长期反馈型任务。
+7. Hui OS 不应该只记录今天做了什么，还要记录为什么这样做、期待什么变化、未来如何验证。
+
+### Hui OS Working Rule
+
+以后凡是涉及重要创业决策、产品决策、品牌决策、选品决策、网站结构调整、Product Center 字段设计、自动化系统建设、TikTok 内容方向测试，都不要只记录做了什么，还要记录：
+
+1. 为什么做。
+2. 期待什么变化。
+3. 未来何时验证。
+4. 用什么指标验证。
+5. 复盘时认知是否需要修正。
+
+Next step:
+
+- 每天遇到重要决策时，使用 `docs/decision_hypothesis_loop.md` 中的 `【决策假设闭环记录模板】` 记录一条可回看的决策假设。
