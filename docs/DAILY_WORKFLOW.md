@@ -947,3 +947,172 @@ Core learning:
 Next step:
 
 - 每天遇到重要决策时，使用 `docs/decision_hypothesis_loop.md` 中的 `【决策假设闭环记录模板】` 记录一条可回看的决策假设。
+
+## 2026-05-17 AI Shopping Readiness v0.1 MVP5 supplier evidence closeout
+
+- Completed supplier evidence supplementation for all 5 MVP Product Fact Verification v0.1 rows:
+  - `Signature Monitor Riser`
+  - `Premium Felt Desk Mat`
+  - `RGB Monitor Light Bar`
+  - `8-in-1 USB-C Hub`
+  - `RGB Podcast Dynamic Microphone`
+- Reviewed and accepted `data/obodesk_mvp_product_fact_verification_today.csv` as the current local Product Fact Verification working draft.
+- Generated and reviewed `docs/OBODESK_MVP5_SAFE_PDP_DRAFT_V0.1.md` as the first English safe PDP copy draft for the 5 MVP products.
+- Confirmed CSV structure:
+  - 41 columns.
+  - 5 product rows.
+  - Each product row has 41 columns.
+  - All 5 products keep `Need_Manual_Check = Yes`.
+  - Most product rows now use `Partially Verified / Supplier Evidence Added`.
+  - `Confidence_Level = Medium` for supplier-evidence rows.
+- No Shopify theme files were changed.
+- No Shopify backend data was written.
+- No Shopify metafields were created.
+- No Product Center formal table was modified.
+- No Git commit was made.
+
+### Product Fact Verification principles confirmed today
+
+1. Product facts must be evidence-driven; do not fill parameters from common sense.
+2. Shopify backend field `Verified` does not mean supplier facts are verified.
+3. PDP copy should first be drafted as a safe local draft, not published directly.
+4. High-risk claims must be explicitly listed under `Claims to Avoid`.
+5. Product Center and Shopify metafields should wait until the PDP draft has passed manual review.
+
+### Key risk boundaries
+
+1. `Premium Felt Desk Mat`: do not use `Wool Felt`, `natural wool`, wool percentage, waterproof, stain-resistant, or heat-resistant claims.
+2. `RGB Monitor Light Bar`: do not use eye-care, anti-blue-light, flicker-free, no glare, protect eyesight, or reduce eye strain claims.
+3. `8-in-1 USB-C Hub`: do not use HDMI, 4K, 100W PD, fast charging, laptop charging, or universal compatibility claims.
+4. `RGB Podcast Dynamic Microphone`: do not use studio-grade, noise cancellation, zero latency, universal compatibility, or simultaneous USB/XLR output claims.
+5. `Signature Monitor Riser`: do not use neck protection, cervical relief, medical, health, or ergonomic treatment claims.
+
+Next step:
+
+- Manually review `docs/OBODESK_MVP5_SAFE_PDP_DRAFT_V0.1.md`.
+- Pay special attention to whether `8-in-1 USB-C Hub` should move `15W-100W` from Technical Details into Evidence Gaps / Notes.
+- After manual review, decide whether to generate a Product Center field sync draft.
+- Do not create Shopify metafields yet.
+- Do not write Shopify PDP content yet.
+
+## 2026-05-19 Product Center sync review draft v0.1
+
+- Completed manual review correction for `docs/OBODESK_MVP5_SAFE_PDP_DRAFT_V0.1.md`.
+  - Moved the `8-in-1 USB-C Hub` `15W-100W` supplier-material range out of positive `Technical Details`.
+  - Kept the `15W-100W` note only in `Evidence Gaps / Notes` to prevent misuse as a `100W PD` claim.
+- Generated and reviewed `docs/OBODESK_MVP5_PRODUCT_CENTER_SYNC_DRAFT_V0.1.md`.
+- Generated and corrected `data/obodesk_mvp5_product_center_sync_review_draft.csv`.
+- Current review CSV status:
+  - 34 columns.
+  - 5 product rows.
+  - `Ready_To_Import = No` for all rows.
+  - `Product_Center_Write_Status = Review Draft Only` for all rows.
+  - Can be used as Product Center pre-import manual review CSV v0.1.
+- Fixed the key field-classification issue in `RGB Podcast Dynamic Microphone`:
+  - Removed `Do not claim universal compatibility or compatibility with all devices.` from the `Compatibility` field.
+  - Kept that risk warning in `Risk_Flag`, `Notes`, and `Claims_To_Avoid`.
+  - `Compatibility` now contains only supplier-confirmed compatibility facts.
+- No Shopify theme files were changed.
+- No Shopify backend data was written.
+- No Shopify metafields were created.
+- No Feishu Product Center formal table was modified.
+- No Feishu CLI write command was used.
+- No Git commit was made.
+
+### Product Center sync principles confirmed today
+
+1. Product Center sync drafts must separate safe facts from risk-control notes.
+2. `Technical_Specs` must not contain supplier ranges that can be misread as confirmed claims.
+3. `Claims_To_Avoid`, `Risk_Flag`, `Evidence_Gaps`, and `Notes` are review-control fields, not positive PDP facts.
+4. `Ready_To_Import` should remain `No` until human review decides field-level readiness.
+5. Product Center formal sync and Shopify metafields should wait until the review CSV passes manual review.
+
+Next step:
+
+- Manually review `data/obodesk_mvp5_product_center_sync_review_draft.csv`.
+- Decide which fields can enter a Feishu Product Center draft import version.
+- Do not write the formal Product Center table yet.
+- Do not create Shopify metafields yet.
+
+## 2026-05-20 — OboDesk 证据化 MVP 工作底盘建立与目录治理
+
+### 今日目标
+
+- 将《创始人行动手册》的 AI-Native Startup 方法论接入 OboDesk 项目。
+- 统一主工作目录。
+- 建立证据化 MVP 阶段的上层方法论、文档索引和数据边界。
+- 防止后续 Codex / Agent 误把草稿、CSV、AI 输出当成正式业务事实。
+
+### 今日完成
+
+- 将《创始人手册中文版.pdf》提取为：
+  - `docs/reference/FOUNDERS_PLAYBOOK_CN_EXTRACT.md`
+- 生成并小修：
+  - `docs/OBODESK_AI_NATIVE_STARTUP_METHOD.md`
+- 明确当前 OboDesk 阶段为：
+  - 证据化 MVP 阶段，而不是发布阶段或规模化阶段。
+- 统一后续主工作目录为：
+  - `D:\My-AiOS\10_Workspace\WORK\shopify-projects\obodesk-shopify`
+- 新增并小修 4 个证据化 MVP 配套文档：
+  - `docs/OBODESK_PROBLEM_EVIDENCE_MAP.md`
+  - `docs/OBODESK_MVP_SCOPE.md`
+  - `docs/OBODESK_AGENTIC_WORKFLOW_DESIGN.md`
+  - `docs/OBODESK_ADVERSARIAL_REVIEW_LOG.md`
+- 完成只读目录盘点。
+- 完成 workspace structure audit，并生成保存：
+  - `docs/OBODESK_WORKSPACE_STRUCTURE_AUDIT_2026-05-20.md`
+- 完成 `git status --short` 分组诊断。
+- 新增：
+  - `docs/INDEX.md`
+- 新增：
+  - `data/README.md`
+
+### 今日关键判断
+
+- OboDesk 当前已经具备 Shopify 独立站、Product Center、商品事实核验、Codex 工作流和文档底座。
+- 但仍缺少足够真实市场证据，包括用户问题证据、内容转化证据、加购 / 购买证据、客服反馈、复购 / 推荐信号。
+- 当前阶段重点不是继续扩大系统，而是补齐真实市场证据。
+- 不应把页面完成度、Product Center 草稿、AI PDP 草稿、CSV review draft 或自动化能力误判为 PMF。
+- 任何 Product Center 写入、Shopify 发布、CSV 导入、metafields 同步，都必须人工审阅。
+
+### 已建立的事实源优先级
+
+`Shopify commerce facts > supplier/physical evidence > Product Center reviewed records > local review drafts > AI draft content`
+
+### 当前重要边界
+
+- `data/obodesk_mvp_product_fact_verification_today.csv` 是 manual verification only。
+- `data/obodesk_mvp5_product_center_sync_review_draft.csv` 是 review draft only，`Ready_To_Import = No`。
+- `data/obodesk_mvp_product_fact_checklist.csv` 是历史 checklist。
+- `data/obodesk_ai_pdp_p0_template.csv` 是 AI PDP P0 draft。
+- 以上 CSV 均不得直接导入 Product Center、同步 Shopify metafields 或作为正式 PDP 文案来源。
+- 当前确认 `.codex-lark-read-json/` 属于工具缓存，不进入 Git。
+- 当前确认 `data/obodesk_mvp_product_fact_checklist.csv` 只是 CSV 引号格式变化，不进入今天提交。
+
+### 明天建议继续
+
+- 基于 `docs/OBODESK_PROBLEM_EVIDENCE_MAP.md`，围绕 5 个 MVP 产品和 3 个核心场景制定第一轮真实市场证据收集计划。
+- 5 个 MVP 产品：
+  - Signature Monitor Riser
+  - Premium Wool Felt Desk Mat
+  - RGB Monitor Light Bar
+  - 8-in-1 USB-C Hub
+  - RGB Podcast Dynamic Microphone
+- 3 个核心场景：
+  - AI / 远程办公桌面
+  - 视频会议 / 内容创作桌面
+  - 桌面收纳与设备集成
+- 下一步先做只读计划，不要改 Shopify，不要导入 Product Center，不要启动复杂自动化。
+
+### 今日收尾状态
+
+- 今日仅新增 / 更新 Markdown 文档。
+- 未修改代码。
+- 未修改 Shopify theme。
+- 未修改 Product Center 数据。
+- 未修改 CSV 内容。
+- 未运行 Shopify / 飞书写入操作。
+- 当前确认没有 Shopify theme 代码变更。
+- 当前确认没有写入飞书。
+- 当前确认没有导入 Product Center。
+- 主项目已具备证据化 MVP 工作底盘，可以进入真实市场证据收集阶段。
