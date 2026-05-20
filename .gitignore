@@ -1,2 +1,5 @@
 
 references/
+.codex-lark-read-json/
+.codex-lark-field-json/
+.codex-lark-record-json/
