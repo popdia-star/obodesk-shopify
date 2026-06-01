@@ -79,6 +79,7 @@ These files are review materials only. Do not directly import, publish, sync, or
 | --- | --- | --- |
 | `docs/OBODESK_MVP5_SAFE_PDP_DRAFT_V0.1.md` | Safe PDP copy draft for five MVP products. | Draft only. Do not publish to Shopify, import into Product Center, or create Shopify metafields from it. |
 | `docs/OBODESK_MVP5_PRODUCT_CENTER_SYNC_DRAFT_V0.1.md` | Product Center field sync review draft for MVP5. | Manual review only. Do not write formal Product Center data from it. |
+| `docs/OBODESK_DESK_MAT_SAFE_SHOPIFY_UPDATE_2026-05-31.md` | Human Shopify Admin update packet for safer Desk Mat title, PDP copy, SEO, and URL handling. | Manual Shopify Admin update packet only. Do not automate or import. |
 | `data/obodesk_mvp5_product_center_sync_review_draft.csv` | CSV version of Product Center sync review draft. | `Ready_To_Import = No`; `Product_Center_Write_Status = Review Draft Only`. Do not import into formal Product Center. |
 | `data/obodesk_mvp_product_fact_verification_today.csv` | Current manual product fact verification worksheet. | Manual verification only. Do not import into Product Center, sync to Shopify metafields, or use for frontend PDP display until approved. |
 | `data/obodesk_ai_pdp_p0_template.csv` | First-pass AI PDP P0 content draft. | Draft only. Do not treat as verified product fact or PDP copy. |

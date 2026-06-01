@@ -1128,3 +1128,30 @@ Next step:
 - 今日未写入飞书。
 - 今日未导入 Product Center。
 - 今日任务收尾完成。
+
+## 2026-05-31 Desk Mat safe wording and Shopify update prep
+
+- Confirmed current work priority remains evidence-based MVP and product fact safety, not additional automation.
+- Reviewed live Desk Mat URL behavior:
+  - `/products/obodesk-premium-wool-felt-desk-mat` returns 200.
+  - `/products/obodesk-premium-felt-desk-mat` returns 404 before Shopify Admin handle change.
+- Corrected the local homepage Featured Essentials Desk Mat card:
+  - `Essential Wool Desk Mat` -> `Essential Desk Mat`.
+  - Copy changed to safer wording.
+  - Link kept on the currently valid old handle to avoid publishing a 404.
+- Updated the local fact verification worksheet for Desk Mat with stricter safe wording and claim boundaries.
+- Added `docs/OBODESK_DESK_MAT_SAFE_SHOPIFY_UPDATE_2026-05-31.md` as the human Shopify Admin update packet for title, PDP copy, SEO, and future handle/redirect decision notes.
+- Added the new update packet to `docs/INDEX.md`.
+- Ran `shopify.cmd theme check`; result: 45 files inspected, no offenses found.
+- Attempted to open Shopify Admin product editing through Chrome, but the session reached Shopify Accounts login/selection flow and was not stable for automated editing.
+- Local safe wording preparation is complete in the CSV, documentation, and homepage card copy.
+- Shopify Admin has not been manually saved with this Desk Mat update.
+- Later browser review reached the Shopify product page, but the operation was stopped before save; Codex did not click Save and did not write any Shopify Admin fields.
+- No Shopify Admin product data was changed by Codex.
+- No Shopify metafields were created.
+- No Product Center data was imported or written.
+
+Next step:
+
+- In Shopify Admin, manually update only the Desk Mat title, PDP description, SEO title, and SEO description using `docs/OBODESK_DESK_MAT_SAFE_SHOPIFY_UPDATE_2026-05-31.md`.
+- Keep the current live handle `obodesk-premium-wool-felt-desk-mat` for this round. Handle and redirect decisions remain a separate future task.
