@@ -1155,3 +1155,108 @@ Next step:
 
 - In Shopify Admin, manually update only the Desk Mat title, PDP description, SEO title, and SEO description using `docs/OBODESK_DESK_MAT_SAFE_SHOPIFY_UPDATE_2026-05-31.md`.
 - Keep the current live handle `obodesk-premium-wool-felt-desk-mat` for this round. Handle and redirect decisions remain a separate future task.
+
+## 2026-06-03 — Live Theme Emergency Recovery Completed
+
+### Incident Summary
+
+Original target:
+Only hide Kits from the top navigation.
+
+Actual mistake:
+The following 3 Section files were synchronized to the Live Theme:
+
+- `sections/header.liquid`
+- `sections/featured-products.liquid`
+- `sections/footer.liquid`
+
+Key risks:
+
+- The local theme directory and the real online Live Theme structure were not fully aligned.
+- `featured-products.liquid` and `footer.liquid` contained accumulated local changes from earlier work.
+- Shopify CLI previously warned:
+  `It doesn't seem like you're running this command in a theme directory.`
+- Live Theme synchronization continued after the warning appeared.
+- No unpublished preview theme was created before publish.
+- No remote Live Theme backup was duplicated before publish.
+- The operation did not follow the rule of uploading only one file at a time with immediate manual QA after each upload.
+
+### Impact
+
+The online homepage changed beyond the intended scope.
+
+Later review found that the Live Theme code editor was missing:
+
+- `sections/header.liquid`
+- `sections/featured-products.liquid`
+- `sections/footer.liquid`
+
+At the same time, `templates/index.json` still referenced `featured-products`.
+
+### Recovery Process
+
+1. Paused all write operations.
+2. Read-only verified the correct store:
+   `obo-5.myshopify.com`
+3. Read-only verified the original Live Theme:
+   `OboDesk V1 Local Build`
+   Theme ID: `153947996300`
+4. Created the isolated recovery directory:
+   `rollback-backups/recovery-preview-662f7f6`
+5. Pulled the current online theme.
+6. Restored the 3 missing Section files from Git commit `662f7f6`.
+7. Ran `theme check`:
+   `45 files inspected with no offenses found.`
+8. Uploaded the unpublished recovery preview theme:
+   `OboDesk Recovery Preview 662f7f6`
+   Theme ID: `155001913484`
+9. User manually approved the preview.
+10. Duplicated the incorrect Live Theme before publishing recovery:
+    `OboDesk backup before recovery publish`
+    Theme ID: `155002241164`
+    Status: `unpublished`
+11. Published the recovery theme:
+    `OboDesk Recovery Preview 662f7f6`
+    Theme ID: `155001913484`
+    Status: `live`
+12. User manually opened `https://obodesk.com` and confirmed the homepage was restored.
+
+### Recovery Boundary
+
+This round did not:
+
+- Run a new `theme push` against the Live Theme.
+- Modify formal theme files.
+- Modify Shopify Pages.
+- Modify products.
+- Modify inventory.
+- Modify product publication status.
+- Modify Handles.
+- Create Redirects.
+- Modify Feishu.
+- Create a new Git commit.
+- Push to GitHub.
+
+### Root Cause
+
+The root cause was not a single code defect. It was a release process without enough production safety guardrails:
+
+1. Multiple files were synchronized to the Live Theme at once.
+2. Differences between the local theme and online theme were not audited.
+3. The CLI warning did not trigger a stop.
+4. No remote backup was created.
+5. No unpublished preview was created.
+6. No single-file release with step-by-step manual QA was used.
+7. No complete deployment log was kept.
+
+### Follow-Up Constraints
+
+- Pause theme batch synchronization.
+- Before the Live Theme and local theme differences are audited, batch `theme push` is forbidden.
+- Modify only one theme file at a time.
+- Upload only one theme file at a time.
+- Perform immediate manual QA after every upload.
+- Stop immediately when any CLI warning appears.
+- Duplicate the Live Theme before every publish.
+- Upload an unpublished preview theme before every publish.
+- After every publish, record Store, Theme ID, files, commands, and QA result.

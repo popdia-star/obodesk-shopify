@@ -48,6 +48,7 @@ These files define the current evidence-based MVP operating system and should be
 | `docs/OBODESK_AGENTIC_WORKFLOW_DESIGN.md` | Defines roles for Codex, Shopify, Product Center, Feishu, n8n, TikTok content, and human review. | Current |
 | `docs/OBODESK_ADVERSARIAL_REVIEW_LOG.md` | Records adversarial reviews and continue / pause / modify / return-to-idea decisions. | Current |
 | `docs/DAILY_WORKFLOW.md` | Long-running project work log. Use for historical context and recent status checks, but verify current state before acting. | Current log / historical mix |
+| `docs/OBODESK_THEME_RELEASE_AND_ROLLBACK_SOP.md` | OboDesk Shopify theme release, preview, single-file deployment, and emergency rollback SOP. | Current operating doc |
 
 ## Methodology / 方法论
 
