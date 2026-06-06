@@ -1260,3 +1260,22 @@ The root cause was not a single code defect. It was a release process without en
 - Duplicate the Live Theme before every publish.
 - Upload an unpublished preview theme before every publish.
 - After every publish, record Store, Theme ID, files, commands, and QA result.
+
+## 2026-06-03 — Live Theme Difference Audit Completed
+
+- Completed the read-only difference audit between the current Live Theme and local formal theme directory.
+- Current Live Theme:
+  - `OboDesk Recovery Preview 662f7f6`
+  - Theme ID: `155001913484`
+  - Status: `live`
+- Audit directory:
+  - `rollback-backups/live-theme-audit-155001913484`
+- Online file count: 52.
+- Local formal theme file count: 62.
+- Matching file count: 44.
+- Difference file count: 19.
+- Batch `theme push` remains frozen.
+- Only `sections/header.liquid` may enter the next single-file unpublished preview release process.
+- `sections/featured-products.liquid` and `sections/footer.liquid` already match the Live Theme and should not be synced again for this incident.
+- No online write operation was executed.
+- No local formal theme file was modified.

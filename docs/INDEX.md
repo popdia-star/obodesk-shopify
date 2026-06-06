@@ -49,6 +49,7 @@ These files define the current evidence-based MVP operating system and should be
 | `docs/OBODESK_ADVERSARIAL_REVIEW_LOG.md` | Records adversarial reviews and continue / pause / modify / return-to-idea decisions. | Current |
 | `docs/DAILY_WORKFLOW.md` | Long-running project work log. Use for historical context and recent status checks, but verify current state before acting. | Current log / historical mix |
 | `docs/OBODESK_THEME_RELEASE_AND_ROLLBACK_SOP.md` | OboDesk Shopify theme release, preview, single-file deployment, and emergency rollback SOP. | Current operating doc |
+| `docs/OBODESK_LIVE_THEME_DIFF_AUDIT_2026-06-03.md` | Live Theme and local formal theme directory difference audit, forbidden sync list, and single-file release allowlist. | Current audit |
 
 ## Methodology / 方法论
 

@@ -204,3 +204,25 @@ Preferred rollback pattern:
 - Do not publish without a remote Live Theme duplicate backup.
 - Do not publish without an unpublished preview theme.
 - Do not change Shopify Pages, products, inventory, publication status, Handles, Redirects, Markets, Shipping profiles, Metafields, or Feishu data unless a separate task explicitly approves that scope.
+
+### Default Deny List
+
+The following files are forbidden from direct synchronization by default:
+
+- `config/settings_data.json`
+- `templates/*.json`
+- `sections/*-group.json`
+- `sections/page.liquid`
+- `snippets/pagefly-main-js.liquid`
+- `locales/en.default.json`
+- `locales/en.default.schema.json`
+
+These files may contain Shopify online configuration, generated content, localization state, PageFly-related snippets, or online structure files. They require explicit human review and a separate approved release plan before any change.
+
+### Current Single-File Allowlist
+
+The current only allowed single-file unpublished preview release candidate is:
+
+- `sections/header.liquid`
+
+This allowlist does not authorize direct Live Theme push. It only allows the file to enter the unpublished preview, manual QA, Live Theme duplicate backup, publish confirmation, and post-publish QA process.
