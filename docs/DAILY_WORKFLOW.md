@@ -1293,9 +1293,9 @@ User-reported completion:
 
 Local artifacts created during this checkpoint:
 
-- `MONITOR_RISER_FINAL_FACT_CHECK_2026-06-13.md`
-- `OBODESK_MARKET_EVIDENCE_LOG_V1.md`
-- `OBODESK_MONITOR_RISER_VALIDATION_CONTENT_V1.md`
+- `docs/OBODESK_MONITOR_RISER_FACT_CHECK_2026-06-13.md`
+- `docs/OBODESK_MARKET_EVIDENCE_LOG_V1.md`
+- `docs/OBODESK_MONITOR_RISER_VALIDATION_CONTENT_V1.md`
 - `OBODESK_MONITOR_RISER_DAY1_CLAIM_REVIEW_DRAFT.md`
 - `data/obodesk_monitor_riser_14day_validation_log_draft.csv`
 - `docs/OBODESK_MONITOR_RISER_14DAY_VALIDATION_PLAN_DRAFT.md`
@@ -1316,7 +1316,7 @@ Boundary:
 
 Next best step:
 
-- Run the first manual validation cycle for `Signature Monitor Riser`, record real evidence in `OBODESK_MARKET_EVIDENCE_LOG_V1.md` or `data/obodesk_monitor_riser_14day_validation_log_draft.csv`, and avoid new build work unless a P0 storefront blocker is confirmed.
+- Run the first manual validation cycle for `Signature Monitor Riser`, record real evidence in `docs/OBODESK_MARKET_EVIDENCE_LOG_V1.md` or `data/obodesk_monitor_riser_14day_validation_log_draft.csv`, and avoid new build work unless a P0 storefront blocker is confirmed.
 
 ## 2026-06-14 - Validation operating index update
 

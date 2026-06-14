@@ -49,8 +49,8 @@ Read these first during the current Validation stage.
 | `docs/OBODESK_MONITOR_RISER_14DAY_VALIDATION_PLAN_DRAFT.md` | 14-day validation plan for Monitor Riser buyer-intent signals. | Draft operating plan. No Shopify, Product Center, theme, or automation writes. |
 | `docs/OBODESK_SHOPIFY_COLD_VISITOR_MANUAL_TEST_CHECKLIST_DRAFT.md` | Manual cold-visitor path checklist: Home -> Collection -> PDP -> Cart -> Checkout -> trust pages. | Manual checklist only. |
 | `data/obodesk_monitor_riser_14day_validation_log_draft.csv` | Daily evidence log for content, traffic, PDP views, add-to-cart, checkout, orders, questions, objections, and decisions. | Draft log only. Do not import or automate. |
-| `OBODESK_MARKET_EVIDENCE_LOG_V1.md` | Manual first-round market evidence log across MVP products and scenarios. | Manual validation log template. |
-| `OBODESK_MONITOR_RISER_VALIDATION_CONTENT_V1.md` | Three TikTok validation content drafts for Monitor Riser interest testing. | Draft content. Requires human review before publishing. |
+| `docs/OBODESK_MARKET_EVIDENCE_LOG_V1.md` | Manual first-round market evidence log across MVP products and scenarios. | Manual validation log template. |
+| `docs/OBODESK_MONITOR_RISER_VALIDATION_CONTENT_V1.md` | Three TikTok validation content drafts for Monitor Riser interest testing. | Draft content. Requires human review before publishing. |
 
 ## Product Fact Sources
 
@@ -58,7 +58,7 @@ Use these to check product facts and claim boundaries.
 
 | File | Role | Source status |
 | --- | --- | --- |
-| `MONITOR_RISER_FINAL_FACT_CHECK_2026-06-13.md` | Current local Monitor Riser final fact-check report. Confirms only dimensions; marks material, load capacity, product weight, package includes, and country of origin as missing. | Local reviewed fact-check report. Still requires human source confirmation before downstream sync. |
+| `docs/OBODESK_MONITOR_RISER_FACT_CHECK_2026-06-13.md` | Current local Monitor Riser final fact-check report. Confirms only dimensions; marks material, load capacity, product weight, package includes, and country of origin as missing. | Local reviewed fact-check report. Still requires human source confirmation before downstream sync. |
 | `data/obodesk_mvp_product_fact_verification_today.csv` | MVP product fact verification worksheet with Shopify identity fields, partial supplier evidence, and missing fields. | Manual verification worksheet, not formal Product Center data. |
 | `data/README.md` | Data directory usage boundary and CSV source-of-truth rules. | Current data guardrail. |
 | `data/obodesk_mvp5_product_center_sync_review_draft.csv` | Product Center pre-import review CSV for MVP5. | Review draft only; `Ready_To_Import = No`; do not import or sync. |
