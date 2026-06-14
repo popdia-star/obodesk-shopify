@@ -1,6 +1,6 @@
 # OboDesk Data Directory README
 
-Updated: 2026-05-20
+Updated: 2026-06-13
 
 Purpose: this directory contains local CSV worksheets, review drafts, and early content drafts for OboDesk's evidence-based MVP stage. These files are not automatically approved for Product Center import, Shopify metafield sync, or storefront publication.
 
@@ -36,6 +36,7 @@ CSV files in this directory are local review materials unless a human explicitly
 | `data/obodesk_mvp5_product_center_sync_review_draft.csv` | Review draft only. Product Center pre-import review CSV. | Field-level human review before any Product Center draft import decision. | Do not import while `Ready_To_Import = No`. Do not write formal Product Center records. Do not sync to Shopify metafields. |
 | `data/obodesk_mvp_product_fact_checklist.csv` | Historical checklist / early verification template. | Reference old checklist structure or compare early assumptions. | Do not use as current source of truth. Do not import. Do not sync. Do not publish from it. |
 | `data/obodesk_ai_pdp_p0_template.csv` | AI PDP P0 draft. First-pass content planning only. | Early content planning, field ideation, AI shopping readiness discussion. | Do not treat as verified facts. Do not import into Product Center. Do not sync to Shopify metafields. Do not use as final PDP copy. |
+| `data/obodesk_monitor_riser_14day_validation_log_draft.csv` | Monitor Riser 14-day validation log draft. Mostly planned or pending rows until manually filled with evidence. | Record reviewed content-test metrics, PDP behavior, user questions, objections, page issues, screenshots, and daily decisions. | Do not import into Product Center. Do not sync to Shopify. Do not automate. Do not treat blank, pending, or planned rows as evidence. |
 
 ## File Notes
 
@@ -119,6 +120,27 @@ Forbidden:
 - Product Center import.
 - Shopify metafield sync.
 - Final PDP copy publication.
+
+### `data/obodesk_monitor_riser_14day_validation_log_draft.csv`
+
+Status: local validation log draft only.
+
+This file supports the 14-day `Signature Monitor Riser` validation plan. It is a place to record reviewed signals such as content angles, CTA, views, profile visits, link clicks, PDP views, add-to-cart, checkout started, purchase, revenue, user questions, user objections, competitor comparisons, page issues, evidence links, and Continue / Modify / Pause decisions.
+
+Allowed:
+
+- Manual evidence logging.
+- Daily validation review.
+- Weekly Continue / Modify / Pause review.
+- Linking screenshots, exports, or notes captured by a human reviewer.
+
+Forbidden:
+
+- Product Center import.
+- Shopify metafield sync.
+- Shopify product, PDP, theme, checkout, payment, shipping, inventory, market, or publication changes.
+- Automation trigger source.
+- Treating planned, pending, or blank rows as market evidence.
 
 ## Human Review Checklist Before Any Data Promotion
 
