@@ -1279,3 +1279,57 @@ The root cause was not a single code defect. It was a release process without en
 - `sections/featured-products.liquid` and `sections/footer.liquid` already match the Live Theme and should not be synced again for this incident.
 - No online write operation was executed.
 - No local formal theme file was modified.
+
+## 2026-06-13 - Build to Validation status checkpoint
+
+User-reported completion:
+
+1. Theme state confirmation.
+2. Cold Visitor Test.
+3. Cart / Checkout validation.
+4. Monitor Riser fact audit.
+5. Evidence Log V1.
+6. Validation Content V1.
+
+Local artifacts created during this checkpoint:
+
+- `MONITOR_RISER_FINAL_FACT_CHECK_2026-06-13.md`
+- `OBODESK_MARKET_EVIDENCE_LOG_V1.md`
+- `OBODESK_MONITOR_RISER_VALIDATION_CONTENT_V1.md`
+- `OBODESK_MONITOR_RISER_DAY1_CLAIM_REVIEW_DRAFT.md`
+- `data/obodesk_monitor_riser_14day_validation_log_draft.csv`
+- `docs/OBODESK_MONITOR_RISER_14DAY_VALIDATION_PLAN_DRAFT.md`
+- `docs/OBODESK_SHOPIFY_COLD_VISITOR_MANUAL_TEST_CHECKLIST_DRAFT.md`
+
+Current project stage:
+
+- Build -> Validation.
+
+Boundary:
+
+- No Shopify theme publish was performed.
+- No Shopify product data was modified.
+- No Shopify metafields were created.
+- No Product Center import or formal write was performed.
+- No automation was enabled.
+- Validation files are local manual evidence and content draft materials only.
+
+Next best step:
+
+- Run the first manual validation cycle for `Signature Monitor Riser`, record real evidence in `OBODESK_MARKET_EVIDENCE_LOG_V1.md` or `data/obodesk_monitor_riser_14day_validation_log_draft.csv`, and avoid new build work unless a P0 storefront blocker is confirmed.
+
+## 2026-06-14 - Validation operating index update
+
+- OboDesk has moved from Build to Validation.
+- Current operating focus: `Signature Monitor Riser 14-Day Validation`.
+- Daily priorities:
+  - Record real market evidence.
+  - Check PDP / Add to cart / Checkout / PayPal path health when needed.
+  - Record TikTok content feedback, comments, DMs, add-to-cart, checkout, and orders.
+  - Avoid unrelated build work.
+- This round only reorganized the documentation index and daily workflow note.
+- No Shopify Admin operation was performed.
+- No theme file was modified.
+- No theme publish was performed.
+- No file was moved.
+- No Git commit was made.

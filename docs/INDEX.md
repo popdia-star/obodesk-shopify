@@ -1,20 +1,22 @@
 # OboDesk Documentation Index
 
-Updated: 2026-05-20
+Updated: 2026-06-14
 
-Purpose: this index is the entry point for OboDesk project documentation. It tells future operators and agents which files to read first, which files are current, which files are draft-only, and which files must not be treated as official Product Center or Shopify data.
+Purpose: this index is the operating entry point for OboDesk after the Build stage. It tells future operators and agents what to read daily, what is only historical background, what is draft/review-only, and what must not be treated as official Shopify, Product Center, or product fact data.
 
-## Read First
+## Current Stage
 
-For any OboDesk product, storefront, Product Center, content, or automation task, read these first:
+Current stage: `Build -> Validation`.
 
-1. `docs/OBODESK_MVP_SCOPE.md`
-2. `docs/OBODESK_PROBLEM_EVIDENCE_MAP.md`
-3. `docs/OBODESK_AGENTIC_WORKFLOW_DESIGN.md`
-4. `docs/OBODESK_ADVERSARIAL_REVIEW_LOG.md`
-5. `docs/OBODESK_AI_NATIVE_STARTUP_METHOD.md`
+Shopify V1 now has a basic buying path foundation. OboDesk is entering the evidence-based MVP market validation stage instead of continuing broad site construction.
 
-Current stage: evidence-based MVP. The current priority is to collect real market evidence, not to expand automation or product scope.
+## Current Operating Focus
+
+Current single operating focus: `Signature Monitor Riser 14-Day Validation`.
+
+Core question: will real users understand, trust, click, add to cart, enter checkout, and ultimately pay USD 89 for the `Signature Monitor Riser`?
+
+Validation work should produce evidence, not more build surface area.
 
 ## Source Of Truth Priority
 
@@ -26,98 +28,44 @@ When sources conflict, use this priority order:
 4. Local review drafts: CSV review drafts, safe PDP drafts, sync drafts, Codex validation reports.
 5. AI draft content: generated summaries, PDP drafts, scripts, hypotheses, recommendations.
 
-AI drafts and local review drafts are not official facts by themselves.
+AI drafts, CSV drafts, and Product Center draft files are not official facts by themselves.
 
-## MVP Working Principles
+## Current Operating Rules
 
 - Do not treat page completion, theme polish, or checkout operability as PMF.
 - Do not treat drafts as official data.
 - Do not treat AI output as verified fact.
-- Do not automate before the process has been manually run, reviewed, and stabilized.
+- Do not automate before a process has been manually run, reviewed, and stabilized.
 - All Product Center writes, Shopify publication changes, Shopify metafields, PDP publication, and CSV imports require human review.
 - Weak evidence is only an unvalidated hypothesis. It can justify a small validation action, not a launch-stage decision.
 
-## Current / 当前主线
+## Daily Execution Files
 
-These files define the current evidence-based MVP operating system and should be actively maintained.
+Read these first during the current Validation stage.
 
-| File | Purpose | Status |
+| File | Daily use | Status |
 | --- | --- | --- |
-| `docs/OBODESK_MVP_SCOPE.md` | Defines current MVP scope, non-goals, launch evidence threshold, and pivot review cadence. | Current |
-| `docs/OBODESK_PROBLEM_EVIDENCE_MAP.md` | Tracks target users, scenarios, pain points, alternatives, evidence strength, and next validation actions. | Current |
-| `docs/OBODESK_AGENTIC_WORKFLOW_DESIGN.md` | Defines roles for Codex, Shopify, Product Center, Feishu, n8n, TikTok content, and human review. | Current |
-| `docs/OBODESK_ADVERSARIAL_REVIEW_LOG.md` | Records adversarial reviews and continue / pause / modify / return-to-idea decisions. | Current |
-| `docs/DAILY_WORKFLOW.md` | Long-running project work log. Use for historical context and recent status checks, but verify current state before acting. | Current log / historical mix |
-| `docs/OBODESK_THEME_RELEASE_AND_ROLLBACK_SOP.md` | OboDesk Shopify theme release, preview, single-file deployment, and emergency rollback SOP. | Current operating doc |
-| `docs/OBODESK_LIVE_THEME_DIFF_AUDIT_2026-06-03.md` | Live Theme and local formal theme directory difference audit, forbidden sync list, and single-file release allowlist. | Current audit |
+| `docs/DAILY_WORKFLOW.md` | Long-running work log and current stage checkpoint. Use for recent status, but verify current state before action. | Current log / historical mix |
+| `docs/OBODESK_MONITOR_RISER_14DAY_VALIDATION_PLAN_DRAFT.md` | 14-day validation plan for Monitor Riser buyer-intent signals. | Draft operating plan. No Shopify, Product Center, theme, or automation writes. |
+| `docs/OBODESK_SHOPIFY_COLD_VISITOR_MANUAL_TEST_CHECKLIST_DRAFT.md` | Manual cold-visitor path checklist: Home -> Collection -> PDP -> Cart -> Checkout -> trust pages. | Manual checklist only. |
+| `data/obodesk_monitor_riser_14day_validation_log_draft.csv` | Daily evidence log for content, traffic, PDP views, add-to-cart, checkout, orders, questions, objections, and decisions. | Draft log only. Do not import or automate. |
+| `OBODESK_MARKET_EVIDENCE_LOG_V1.md` | Manual first-round market evidence log across MVP products and scenarios. | Manual validation log template. |
+| `OBODESK_MONITOR_RISER_VALIDATION_CONTENT_V1.md` | Three TikTok validation content drafts for Monitor Riser interest testing. | Draft content. Requires human review before publishing. |
 
-## Methodology / 方法论
+## Product Fact Sources
 
-These files provide upper-level context and decision principles.
+Use these to check product facts and claim boundaries.
 
-| File | Purpose | Status |
+| File | Role | Source status |
 | --- | --- | --- |
-| `docs/OBODESK_AI_NATIVE_STARTUP_METHOD.md` | OboDesk-specific AI-native startup method and current stage judgment. | Methodology |
-| `docs/decision_hypothesis_loop.md` | Hui OS decision-hypothesis-review loop for long-feedback entrepreneurship work. | Methodology |
+| `MONITOR_RISER_FINAL_FACT_CHECK_2026-06-13.md` | Current local Monitor Riser final fact-check report. Confirms only dimensions; marks material, load capacity, product weight, package includes, and country of origin as missing. | Local reviewed fact-check report. Still requires human source confirmation before downstream sync. |
+| `data/obodesk_mvp_product_fact_verification_today.csv` | MVP product fact verification worksheet with Shopify identity fields, partial supplier evidence, and missing fields. | Manual verification worksheet, not formal Product Center data. |
+| `data/README.md` | Data directory usage boundary and CSV source-of-truth rules. | Current data guardrail. |
+| `data/obodesk_mvp5_product_center_sync_review_draft.csv` | Product Center pre-import review CSV for MVP5. | Review draft only; `Ready_To_Import = No`; do not import or sync. |
 
-## Product Center / 商品事实核验
+Important rule: CSV files, AI PDP drafts, and Product Center draft files cannot be used directly as official product facts. They must be manually verified before they are used in PDP copy, ads, TikTok content, customer support answers, Shopify metafields, or Product Center formal records.
 
-These files define Product Center workflow, field rules, status rules, and fact verification boundaries.
-
-| File | Purpose | Status |
-| --- | --- | --- |
-| `docs/PRODUCT_CENTER_V1_SOP.md` | Product Center v1.0 operating model and Shopify-first workflow. | Current operating doc |
-| `docs/PRODUCT_CENTER_V1_LOG.md` | Product Center v1.0 closure status, operating boundaries, and next direction. | Current status log |
-| `docs/PRODUCT_CENTER_STATUS_FLOW.md` | Recommended Product Center status fields and transition rules. | Current design |
-| `docs/DAILY_PRODUCT_LAUNCH_SOP.md` | Daily product launch workflow from Shopify to Product Center review. | Current operating doc |
-| `docs/OBODESK_PRODUCT_FACT_VERIFICATION_FIELD_GUIDE.md` | Field guide for manual product fact verification CSV. | Current guardrail |
-| `docs/AI_SHOPPING_READINESS_FIELDS_V1.md` | P0 fields for AI-friendly PDP content planning before Shopify metafields. | Planning doc |
-
-## Draft Only / 草稿，仅供审阅
-
-These files are review materials only. Do not directly import, publish, sync, or use as storefront content without human approval.
-
-| File | Purpose | Restriction |
-| --- | --- | --- |
-| `docs/OBODESK_MVP5_SAFE_PDP_DRAFT_V0.1.md` | Safe PDP copy draft for five MVP products. | Draft only. Do not publish to Shopify, import into Product Center, or create Shopify metafields from it. |
-| `docs/OBODESK_MVP5_PRODUCT_CENTER_SYNC_DRAFT_V0.1.md` | Product Center field sync review draft for MVP5. | Manual review only. Do not write formal Product Center data from it. |
-| `docs/OBODESK_DESK_MAT_SAFE_SHOPIFY_UPDATE_2026-05-31.md` | Human Shopify Admin update packet for safer Desk Mat title, PDP copy, SEO, and URL handling. | Manual Shopify Admin update packet only. Do not automate or import. |
-| `data/obodesk_mvp5_product_center_sync_review_draft.csv` | CSV version of Product Center sync review draft. | `Ready_To_Import = No`; `Product_Center_Write_Status = Review Draft Only`. Do not import into formal Product Center. |
-| `data/obodesk_mvp_product_fact_verification_today.csv` | Current manual product fact verification worksheet. | Manual verification only. Do not import into Product Center, sync to Shopify metafields, or use for frontend PDP display until approved. |
-| `data/obodesk_ai_pdp_p0_template.csv` | First-pass AI PDP P0 content draft. | Draft only. Do not treat as verified product fact or PDP copy. |
-
-## Historical / 历史记录
-
-These files are useful for context but should not override current source-of-truth rules.
-
-| File | Purpose | Note |
-| --- | --- | --- |
-| `docs/DAILY_WORKFLOW.md` | Full operating history for theme, storefront, Product Center, and AI Shopping Readiness work. | Large mixed-status log. Confirm current state before using as input. |
-| `data/obodesk_mvp_product_fact_checklist.csv` | Early product fact checklist. | Contains `TBD` / `Pending` fields. Use as historical template, not current fact source. |
-
-## Reference / 外部参考
-
-These files are background material only.
-
-| File | Purpose | Note |
-| --- | --- | --- |
-| `docs/reference/FOUNDERS_PLAYBOOK_CN_EXTRACT.md` | Source excerpt used to build OboDesk AI-native startup method. | Reference only. |
-| `references/OboDesk 新完整店铺设计方案0422版.pdf` | Earlier OboDesk full store design reference. | External design reference. Confirm current product direction before using. |
-
-## Risk / 容易误用文件
-
-These files are easy to misuse because they look complete or import-ready.
-
-| File | Misuse risk | Required handling |
-| --- | --- | --- |
-| `data/obodesk_mvp5_product_center_sync_review_draft.csv` | Looks like a Product Center import file. | Do not import. It is review-only until human approval changes readiness. |
-| `data/obodesk_mvp_product_fact_verification_today.csv` | Contains partially verified product facts. | Do not treat as formal Product Center data or Shopify metafield source. |
-| `data/obodesk_ai_pdp_p0_template.csv` | Contains AI-drafted PDP fields that may include unverified assumptions or old handles. | Use only as first-pass draft context. |
-| `docs/OBODESK_MVP5_PRODUCT_CENTER_SYNC_DRAFT_V0.1.md` | Looks like a complete sync plan. | Keep as manual review draft. Do not write formal records from it directly. |
-| `docs/OBODESK_MVP5_SAFE_PDP_DRAFT_V0.1.md` | Looks publishable because it is polished. | Do not publish or convert to metafields until facts and claims are approved. |
-| `.codex-lark-read-json/` | Local connector/Codex read artifact. | Do not use as project source-of-truth. |
-
-## Shopify Theme / Code
+## Shopify Theme Safety
 
 Theme files live under:
 
@@ -125,16 +73,89 @@ Theme files live under:
 theme/obodesk-theme/
 ```
 
-Before any theme work, read:
+Theme safety and recovery references:
 
-1. `theme/obodesk-theme/AGENTS.md`
-2. `docs/OBODESK_MVP_SCOPE.md`
-3. `docs/OBODESK_AGENTIC_WORKFLOW_DESIGN.md`
+| File or directory | Purpose | Status |
+| --- | --- | --- |
+| `docs/OBODESK_THEME_RELEASE_AND_ROLLBACK_SOP.md` | Required release, preview, single-file upload, backup, publish, and rollback procedure. | Current operating guardrail. |
+| `docs/OBODESK_LIVE_THEME_DIFF_AUDIT_2026-06-03.md` | Live Theme vs local formal theme audit, forbidden sync list, and single-file allowlist. | Current audit. |
+| `theme/obodesk-theme/` | Local formal Shopify theme directory. | Code source, not proof of online state. |
+| `rollback-backups/` | Recovery previews, live theme audits, and rollback evidence directories. | Historical evidence / rollback material. |
 
-Current rule: do not modify product form, variant selector, cart, checkout, payment, or PDP metafield rendering unless the task explicitly approves that scope and verification path.
+Validation-stage theme rule: theme batch push remains frozen. Only if a P0 live-store blocker is confirmed should theme work proceed, and it must follow the release/rollback SOP: one file, unpublished preview, manual QA, backup, explicit human confirmation, then publish.
 
-## Next Suggested Index Work
+## Historical Build Documents
 
-Recommended next step: add `data/README.md` to document CSV purpose, import restrictions, source-of-truth priority, and which files are draft-only.
+These files are important background from the Build stage, but they are not the daily execution entry point during Monitor Riser Validation.
 
-Do not create `data/README.md` in this round unless explicitly requested.
+| File | Use now | Status |
+| --- | --- | --- |
+| `docs/OBODESK_MVP_SCOPE.md` | Understand evidence-based MVP boundaries and stage criteria. | Historical/current strategy reference. |
+| `docs/OBODESK_PROBLEM_EVIDENCE_MAP.md` | Understand target users, scenarios, weak evidence, and validation questions. | Historical/current evidence map. |
+| `docs/OBODESK_AGENTIC_WORKFLOW_DESIGN.md` | Understand AI, Shopify, Product Center, Feishu, n8n, TikTok, and human review boundaries. | Historical/current workflow reference. |
+| `docs/OBODESK_ADVERSARIAL_REVIEW_LOG.md` | Understand adversarial review and Continue / Modify / Pause decisions. | Historical/current review reference. |
+| `docs/OBODESK_AI_NATIVE_STARTUP_METHOD.md` | Understand OboDesk's AI-native startup methodology and stage judgment. | Methodology reference. |
+| `docs/OBODESK_MVP5_SAFE_PDP_DRAFT_V0.1.md` | Safe PDP draft for MVP5. | Draft only; do not publish or treat as official facts. |
+| `docs/OBODESK_MVP5_PRODUCT_CENTER_SYNC_DRAFT_V0.1.md` | Product Center field sync review draft. | Draft only; do not write formal Product Center records. |
+
+## Product Center And AI Shopping References
+
+Use only when reviewing Product Center or AI-shopping readiness, not as daily Validation execution files.
+
+| File | Purpose | Status |
+| --- | --- | --- |
+| `docs/PRODUCT_CENTER_V1_SOP.md` | Product Center v1.0 operating model. | Reference. |
+| `docs/PRODUCT_CENTER_V1_LOG.md` | Product Center v1.0 closure and status log. | Reference. |
+| `docs/PRODUCT_CENTER_STATUS_FLOW.md` | Product Center status fields and transition rules. | Reference. |
+| `docs/DAILY_PRODUCT_LAUNCH_SOP.md` | Earlier daily product launch workflow from Shopify to Product Center review. | Reference; not current daily focus. |
+| `docs/OBODESK_PRODUCT_FACT_VERIFICATION_FIELD_GUIDE.md` | Field guide for manual product fact verification. | Current guardrail. |
+| `docs/AI_SHOPPING_READINESS_FIELDS_V1.md` | P0 fields for AI-friendly PDP planning before metafields. | Planning reference only. |
+
+## Draft / Review Only / Do Not Treat As Source Of Truth
+
+These files are easy to misuse because they look complete, import-ready, or official. They must not be used as current facts without human review.
+
+| File or directory | Misuse risk | Required handling |
+| --- | --- | --- |
+| `data/obodesk_mvp_product_fact_checklist.csv` | Historical checklist with `TBD` / `Pending` fields. | Historical template only. Do not import, sync, or publish from it. |
+| `data/obodesk_ai_pdp_p0_template.csv` | AI PDP P0 draft can contain unverified assumptions or outdated handles. | Content ideation only. Do not treat as facts. |
+| `data/obodesk_mvp5_product_center_sync_review_draft.csv` | Looks like a Product Center import file. | Do not import while `Ready_To_Import = No`. |
+| `data/obodesk_monitor_riser_14day_validation_log_draft.csv` | Looks like a performance tracker but starts mostly blank. | Record reviewed evidence only. Blank/pending rows are not validation results. |
+| `docs/OBODESK_MVP5_SAFE_PDP_DRAFT_V0.1.md` | Looks publishable because copy is polished. | Draft only. Do not publish or convert to metafields. |
+| `docs/OBODESK_MVP5_PRODUCT_CENTER_SYNC_DRAFT_V0.1.md` | Looks like a complete sync plan. | Review draft only. Do not write formal records from it. |
+| `docs/OBODESK_DESK_MAT_SAFE_SHOPIFY_UPDATE_2026-05-31.md` | Looks like a Shopify Admin update packet. | Manual Shopify Admin packet only; not automation input. |
+| `theme/obodesk-theme/README.md` | Still describes Shopify Skeleton Theme, not OboDesk operations. | Theme scaffold reference only. |
+| `docs/README.md` | Thin older docs readme. | Prefer this `docs/INDEX.md`. |
+| `.codex-lark-*` | Local connector/Codex artifacts. | Tool cache only. Do not use as source of truth. |
+| `rollback-backups/` | Contains recovery/audit/preview snapshots. | Do not treat as current theme source unless executing rollback with SOP. |
+
+## Frozen During Validation
+
+The following are frozen during the current Validation stage unless the user explicitly approves a separate task and review path:
+
+- No theme batch push.
+- No broad homepage redesign or unrelated storefront build work.
+- No Product Center expansion or formal import.
+- No Shopify metafield creation from drafts.
+- No automation workflow expansion.
+- No new plugin installation.
+- No SKU matrix expansion.
+- No new product category expansion.
+- No TikTok/public content publishing before human claim review.
+- No use of draft files as official facts.
+
+## Current Manual Validation Loop
+
+1. Confirm cold visitor path is healthy.
+2. Publish or manually run a small approved content test.
+3. Record traffic source, views, CTR, PDP visits, add-to-cart, checkout, orders, comments, questions, and pain points.
+4. Classify evidence as None / Weak / Medium / Strong.
+5. Decide Continue / Modify / Pause.
+6. Avoid new build work unless a P0 live-store blocker appears.
+
+## Reference Materials
+
+| File | Purpose | Status |
+| --- | --- | --- |
+| `docs/reference/FOUNDERS_PLAYBOOK_CN_EXTRACT.md` | Source excerpt used for OboDesk AI-native startup method. | Reference only. |
+| `references/` | External design/reference materials. | Background only; confirm current product direction before use. |
