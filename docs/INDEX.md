@@ -1,18 +1,18 @@
 # OboDesk Documentation Index
 
-Updated: 2026-06-14
+Updated: 2026-06-18
 
 Purpose: this index is the operating entry point for OboDesk after the Build stage. It tells future operators and agents what to read daily, what is only historical background, what is draft/review-only, and what must not be treated as official Shopify, Product Center, or product fact data.
 
 ## Current Stage
 
-Current stage: `Build -> Validation`.
+Current stage: `Validation`.
 
 Shopify V1 now has a basic buying path foundation. OboDesk is entering the evidence-based MVP market validation stage instead of continuing broad site construction.
 
 ## Current Operating Focus
 
-Current single operating focus: `Signature Monitor Riser 14-Day Validation`.
+Current first-round validation object and single operating focus: `Signature Monitor Riser 14-Day Validation`.
 
 Core question: will real users understand, trust, click, add to cart, enter checkout, and ultimately pay USD 89 for the `Signature Monitor Riser`?
 
@@ -38,6 +38,16 @@ AI drafts, CSV drafts, and Product Center draft files are not official facts by 
 - Do not automate before a process has been manually run, reviewed, and stabilized.
 - All Product Center writes, Shopify publication changes, Shopify metafields, PDP publication, and CSV imports require human review.
 - Weak evidence is only an unvalidated hypothesis. It can justify a small validation action, not a launch-stage decision.
+
+Before any Shopify Theme, PageFly, product CSV, Product Center sync, or live publish operation, read `docs/OBODESK_SHOPIFY_OPERATION_RED_LINES.md` first.
+
+## Current Architecture, Safety, And Work Log Records
+
+| File | Purpose | Status |
+| --- | --- | --- |
+| `docs/OBODESK_SHOPIFY_READ_ONLY_ARCHITECTURE_AUDIT_2026-06-18.md` | OboDesk Shopify read-only architecture audit covering repository structure, Theme risks, Product Data status, Validation assets, and recommended next actions. | Current architecture audit |
+| `docs/OBODESK_SHOPIFY_OPERATION_RED_LINES.md` | Shopify operation red lines. Must be read before any Theme, PageFly, product, CSV, sync, or publishing operation. | Mandatory safety guardrail |
+| `docs/work-log/2026/2026-06-18.md` | Daily work log recording the read-only audit, red-line documentation, and work-log entry-point hardening. | Daily record |
 
 ## Daily Execution Files
 
